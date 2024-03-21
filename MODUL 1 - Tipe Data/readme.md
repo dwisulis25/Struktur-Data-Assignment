@@ -3,7 +3,7 @@
 
 ## Dasar Teori
 
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
+Tipe Data adalah cara pengumpulan dan mengatur data dengan tujuan agar operasi di komputer dapat dilakukan dengan efektif.
 
 ## Guided 
 
