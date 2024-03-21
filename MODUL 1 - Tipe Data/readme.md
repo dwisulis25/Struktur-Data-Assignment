@@ -4,6 +4,12 @@
 ## Dasar Teori
 
 Tipe Data adalah cara pengumpulan dan mengatur data dengan tujuan agar operasi di komputer dapat dilakukan dengan efektif.
+Berikut tipe data yang dipelajari:
+1. Tipe Data Primitif
+2. Tipe Data Abstrak
+3. Tipe Data Koleksi
+
+Tipe Data Primitif
 
 ## Guided 
 
