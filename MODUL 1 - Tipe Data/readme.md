@@ -120,24 +120,158 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 
 ## Unguided 
 
-### 1. [Soal]
+### 1. [Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi data primitif tersebut!.]
 
 ```C++
 #include <iostream>
 using namespace std;
 
+// Menambahkan dua bilangan bulat
+int tambah(int a, int b) {
+    return a + b;
+}
+
+// Mengalikan dua bilangan bulat
+int kali(int a, int b) {
+    return a * b;
+}
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    int num1 = 5; // Tipe data primitif int
+    int num2 = 3; // Tipe data primitif int
+
+    // Hasil penjumlahan dan perkalian
+    cout << "Hasil penjumlahan: " << tambah(num1, num2) << endl;
+    cout << "Hasil perkalian: " << kali(num1, num2) << endl;
+
     return 0;
 }
+
 ```
-#### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk mendefinisikan dua fungsi, tambah dan kali, dari kode penjumlahan dan perkalian dua bilangan bulat. Tipe data primitif int, yaitu dari Fungsi main yang mendeklarasikan dua variabel num1 dan num2, selanjutnya kedua fungsi tersebut dipanggil untuk menampilkan hasil.
+
+Penjelasan:
+
+int pada tipe data primitif digunakan untuk menyimpan nilai numerik sederhana.
+Fungsi dari tambah dan kali digunakan untuk menerima argumen tipe data primitif dan mengembalikan hasil operasi matematika.
+
+Kesimpulan: 
+Dalam pembuatan program dan memahami cara data diolah dan disimpan dalam komputer, dengan Tipe data primitif dalam C++ dapat menjadikan lebih efisien saat menyimpan dan memanipulasi data pada operasi dasar seperti aritmatika. 
 
 #### Full code Screenshot:
 ![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
+
+### 2. [Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!]
+
+Fungsi class dan struk adalah untuk mendefinisikan tipe data baru dengan data dan fungsi anggota.
+
+Fungsi class digunakan untuk mendefinisikan blueprint untuk objek. Fungsi ini dapat memungkinkan untuk mengelompokkan variabel (atribut) dan fungsi (metode) yang berhubungan menjadi satu unit kerja yang dapat memiliki konstruktor dan destruktor. Dimana anggota dan fungsi anggota dari class  adalah privat secara default. Fungsi ini secara umum digunakan untuk data yang lebih kompleks.
+
+```C++
+#include <iostream>
+using namespace std;
+
+// Definisi class
+class Mobil {
+public:
+    string merk;
+    string model;
+    int tahun;
+
+    // Fungsi untuk menampilkan data mobil
+    void display() {
+        cout << "Merk: " << merk << endl;
+        cout << "Model: " << model << endl;
+        cout << "Tahun: " << tahun << endl;
+    }
+};
+
+int main() {
+    // Membuat objek dari class Mobil
+    Mobil mobilSaya;
+    mobilSaya.merk = "Toyota";
+    mobilSaya.model = "Corolla";
+    mobilSaya.tahun = 2020;
+
+    // Memanggil fungsi display
+    mobilSaya.display();
+
+    return 0;
+}
+```
+Penjelasan:
+Berdasarkan contoh di atas, class Mobil memiliki tiga atribut (merk, model, tahun) dan satu metode (display). Objek mobilSaya dibuat dari class Mobil dan metode display dipanggil untuk menampilkan data mobil tersebut.
+
+
+Fungsi Struct
+Fungsi struct digunakan untuk menggabungkan berbagai tipe data menjadi satu unit. Tujuannya untuk mendefinisikan struktur data yang kompleks, di mana dapat digunakan menyimpan data yang terkait dalam satu variabel. Fungsi ini mirip dengan fungsi class, hanya saja biasanya digunakan untuk struktur data yang lebih sederhana yang mana tidak memiliki konstruktor atau destruktor secara default. Anggota dan fungsi anggota dari struct secara default adalah public. Biasanya sering digunakan ketika hanya ingin menyimpan data tanpa memerlukan fungsi tambahan.
+
+```C++
+#include <iostream>
+using namespace std;
+
+// Definisi struct
+struct Mahasiswa {
+    string nama;
+    int umur;
+    float ipk;
+};
+
+int main() {
+    // Membuat objek struct
+    Mahasiswa mhs1;
+    mhs1.nama = "Budi";
+    mhs1.umur = 20;
+    mhs1.ipk = 3.5;
+
+    // Menampilkan data mahasiswa
+    cout << "Nama: " << mhs1.nama << endl;
+    cout << "Umur: " << mhs1.umur << " tahun" << endl;
+    cout << "IPK: " << mhs1.ipk << endl;
+
+    return 0;
+}
+```
+Penjelasan:
+Berdasarkan contoh diatas, struct Mahasiswa digunakan untuk menyimpan informasi tentang mahasiswa,diantaranya nama, umur, dan IPK. Objek mhs1 berasal dari struct Mahasiswa dan digunakan untuk menyimpan dan menampilkan data mahasiswa tersebut. struct pada program ini berfungsi sebagai cara untuk mengelola data yang berhubungan dengan cara yang logis dan mudah diakses.
+
+
+### 3. [Buatlah program menggunakan fungsi map. Jelaskan perbedaan dari array dan map!]
+
+Contoh program menggunakan fungsi map
+
+```C++
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main() {
+    // Membuat map dengan key tipe string dan value tipe int
+    map<string, int> umur;
+
+    // Menambahkan data ke dalam map
+    umur["Alice"] = 25;
+    umur["Bob"] = 28;
+    umur["Charlie"] = 32;
+
+    // Menampilkan semua data dalam map
+    for (const auto &pair : umur) {
+        cout << pair.first << " berumur " << pair.second << " tahun." << endl;
+    }
+
+    return 0;
+}
+```
+Penjelasan:
+Berdasarkan program diatas dapat didefinisikan, map digunakan untuk menyimpan pasangan key-value di mana key adalah nama orang dan value adalah umurnya. map memungkinkan kita untuk mengakses elemen dengan key yang diberikan, yang tidak mungkin dilakukan dengan array.
+
+Perbedaan antara map dan array
+map adalah struktur data yang lebih kompleks yang menyediakan akses berbasis key dan memungkinkan penyimpanan elemen secara dinamis dengan urutan tertentu berdasarkan key.
+sedangkan array adalah struktur data sederhana dengan akses berbasis indeks,yang merupakan bilangan bulat. Dimana ukuran array ditentukan pada saat kompilasi dan tidak bisa berubah.Semua elemen array disimpan dalam urutan kontigu di memori.
+
+
 
 
 ## Kesimpulan
