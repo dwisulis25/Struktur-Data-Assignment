@@ -11,6 +11,39 @@ Berikut tipe data yang dipelajari:
 
 Tipe Data Primitif
 
+Tipe data primitif adalah kategori dasar dari tipe data yang tersedia dalam bahasa pemrograman yang tidak dapat dibagi lagi menjadi tipe data yang lebih kecil. Berikut contoh tipe data primitif
+
+Integer: Merupakan tipe data yang digunakan untuk menyimpan data numerik tanpa komponen desimal. Contohnya adalah angka 26 yang disebutkan dalam buku “Algoritma dan Struktur Data” oleh Penerbit Widina1.
+Float: Tipe data untuk menyimpan bilangan pecahan atau bilangan dengan komponen desimal.
+Char: Tipe data yang digunakan untuk menyimpan karakter tunggal. Dalam konteks bahasa pemrograman, ‘char’ merupakan tipe data primitif karena hanya mengandung satu karakter.
+Boolean: Tipe data yang hanya memiliki dua nilai, yaitu true atau false. Ini digunakan untuk logika perbandingan dan kondisional.
+String: Meskipun secara teknis bukan tipe data primitif dalam beberapa bahasa pemrograman karena terdiri dari rangkaian karakter, namun sering kali dikelompokkan bersama karena fungsinya yang fundamental dalam menyimpan dan memanipulasi teks.
+
+Tipe Data Abstrak
+
+Tipe Data Abstrak (TDA) adalah model matematika yang disertai dengan sekumpulan operasi terhadap model tersebut. TDA memungkinkan kita untuk mendefinisikan dan bekerja dengan data dalam cara yang lebih abstrak dan terorganisir. Sebagai contoh, TDA bisa berupa himpunan bilangan bulat dengan operasi seperti gabungan dan irisan1.
+
+Dalam implementasi, TDA diwujudkan melalui struktur data yang berisi variabel-variabel yang dapat terdiri dari berbagai tipe data. Struktur data ini mempunyai berbagai jenis dan cara relasi antara setiap variabelnya. Operasi-operasi dalam TDA dapat mengambil operand yang bukan hanya elemen dari TDA itu sendiri, tetapi juga dari TDA lain, dan hasil operasinya pun bisa berupa elemen atau TDA lain1.
+
+Contoh implementasi TDA dalam pemrograman adalah melalui struktur data abstrak seperti stack atau tumpukan. 
+
+Tipe Data Koleksi
+
+Tipe Data Koleksi adalah struktur data yang memungkinkan penyimpanan dan pengelolaan sejumlah elemen data secara terorganisir. Tipe data ini biasanya mencakup array, list, stack, queue, set, dan map, yang masing-masing memiliki karakteristik dan operasi khusus1. Contoh tipe data koleksi:
+
+Array: Kumpulan elemen data yang memiliki tipe sama dan disimpan secara berurutan dalam memori. Setiap elemen dapat diakses menggunakan indeks.
+
+List: Struktur data yang memungkinkan penyimpanan elemen secara berurutan dengan kemampuan untuk menambahkan atau menghapus elemen dari posisi manapun.
+Java
+
+Stack: Koleksi yang beroperasi dengan prinsip LIFO (Last In, First Out), di mana elemen terakhir yang ditambahkan akan menjadi elemen pertama yang dihapus.
+
+Queue: Koleksi yang beroperasi dengan prinsip FIFO (First In, First Out), di mana elemen pertama yang ditambahkan akan menjadi elemen pertama yang dihapus.
+
+Map: Koleksi yang menyimpan pasangan kunci-nilai, di mana setiap kunci unik dan terkait dengan satu nilai.
+
+Set: Kumpulan elemen yang tidak berurutan dan tidak mengizinkan duplikasi elemen.
+
 ## Guided 
 
 ### 1. Tipe Data Primitif
@@ -300,4 +333,5 @@ sedangkan array adalah struktur data sederhana dengan akses berbasis indeks,yang
 Jadi berdasarkan tipe data yang sudah di pelajari bahwa tipe data primitif dapat memberikan dasar yang efisien untuk operasi dasar, tipe data abstrak memungkinkan struktur data yang lebih kompleks dan terorganisir, dan tipe data koleksi menyediakan cara untuk mengelola kumpulan data yang besar dengan lebih efektif..
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+
+[1] Meidyan P., Guntoro B., Rezania A., Yunjansyah, Andri S., Yesi S., Arsia R., Fadhila T., (2022). Algoritma dan Struktur Data.https://repository.penerbitwidina.com/media/publications/557434-algoritma-dan-struktur-data-2ceb12a5.pdf.
