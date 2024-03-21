@@ -50,7 +50,31 @@ int main()
     return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas adalah kode yang berfungsi sebagai kalkulator.
+
+#include<iostream>: 
+merupakam direktif preprocessor untuk memberitahu compiler untuk menyertakan file header iostream yang diperlukan untuk input dan output.
+using namespace std;:
+merupakam compiler untuk menggunakan namespace standar (std) yang mendefinisikan banyak fungsi input dan output standar.
+int main() { ... }:
+memiliki fungsi utama di mana eksekusi program dimulai.
+char op;:
+digunakan untuk mendeklarasikan variabel op sebagai tipe data karakter, yang akan digunakan untuk menyimpan operator matematika yang dimasukkan oleh pengguna.
+float num1, num2;: 
+berguna untuk mendeklarasikan dua variabel num1 dan num2 sebagai tipe data float, yang akan digunakan untuk menyimpan angka yang dimasukkan oleh pengguna.
+cin >> op;: 
+untuk membaca operator dari input pengguna.
+cin >> num1 >> num2;: Ini membaca dua angka dari input pengguna.
+switch(op) { ... }: 
+adalah pernyataan switch yang memilih blok kode yang akan dieksekusi berdasarkan nilai dari op.
+case '+':: 
+akkan mengeksekusi kode cout << num1 + num2; yang menjumlahkan num1 dan num2.
+case '-'::
+Operator pengurangan
+case '*': dan case '/':: Ini mengeksekusi perkalian dan pembagian, masing-masing.
+return 0;: 
+untuk mengakhiri fungsi main dan mengembalikan nilai 0, yang menandakan bahwa program telah berjalan dengan sukses.
+Tipe data primitif yang digunakan di sini adalah char untuk op dan float untuk num1 dan num2. 
 
 ### 2. Tipe Data Abstrak
 
@@ -90,7 +114,7 @@ int main()
     return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk mencetak struct Mahasiswa yaitu mhs1 dan mhs2. Setiap instance diisi dengan data nama, alamat, dan umur yang spesifik. Kemudian, kode tersebut mencetak informasi dari kedua instance tersebut menggunakan fungsi printf.
 
 ### 3. Tipe Data Koleksi
 
@@ -116,7 +140,7 @@ int main()
     return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode diatas merupakan tipe data koleksi dengan menggunakan array yang digunakan untuk menyimpan lima nilai integer. Kode diatas digunakan untuk mencetak nilai-nilai yang telah disimpan dalam array ke konsol.
 
 ## Unguided 
 
@@ -160,8 +184,6 @@ Fungsi dari tambah dan kali digunakan untuk menerima argumen tipe data primitif 
 Kesimpulan: 
 Dalam pembuatan program dan memahami cara data diolah dan disimpan dalam komputer, dengan Tipe data primitif dalam C++ dapat menjadikan lebih efisien saat menyimpan dan memanipulasi data pada operasi dasar seperti aritmatika. 
 
-#### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
 
 ### 2. [Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!]
 
