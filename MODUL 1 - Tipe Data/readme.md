@@ -297,7 +297,7 @@ sedangkan array adalah struktur data sederhana dengan akses berbasis indeks,yang
 
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Jadi berdasarkan tipe data yang sudah di pelajari bahwa tipe data primitif dapat memberikan dasar yang efisien untuk operasi dasar, tipe data abstrak memungkinkan struktur data yang lebih kompleks dan terorganisir, dan tipe data koleksi menyediakan cara untuk mengelola kumpulan data yang besar dengan lebih efektif..
 
 ## Referensi
 [1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
