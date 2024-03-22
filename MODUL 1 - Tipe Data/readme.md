@@ -184,12 +184,20 @@ Kode diatas merupakan tipe data koleksi dengan menggunakan array yang digunakan 
 using namespace std;
 
 // Menambahkan dua bilangan bulat
+<<<<<<< HEAD
+float tambah(int a, int b) {
+=======
 int tambah(int a, int b) {
+>>>>>>> 10825b934e862f6d27eb4c64d48648c0d4c3014f
     return a + b;
 }
 
 // Mengalikan dua bilangan bulat
+<<<<<<< HEAD
+float kali(int a, int b) {
+=======
 int kali(int a, int b) {
+>>>>>>> 10825b934e862f6d27eb4c64d48648c0d4c3014f
     return a * b;
 }
 
@@ -201,6 +209,28 @@ int main() {
     cout << "Hasil penjumlahan: " << tambah(num1, num2) << endl;
     cout << "Hasil perkalian: " << kali(num1, num2) << endl;
 
+<<<<<<< HEAD
+    return 0;
+}
+```
+
+#### Output:
+![Screenshot (333)](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/91455543/f3037012-b00c-4fbf-a238-dbc3ad8ea4a3)
+
+Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk mendefinisikan dua fungsi, tambah dan kali, dari kode penjumlahan dan perkalian dua bilangan bulat. Tipe data primitif int, yaitu dari Fungsi main yang mendeklarasikan dua variabel num1 dan num2, selanjutnya kedua fungsi tersebut dipanggil untuk menampilkan hasil.
+
+Penjelasan:
+
+int pada tipe data primitif digunakan untuk menyimpan nilai numerik sederhana.
+Fungsi dari tambah dan kali digunakan untuk menerima argumen tipe data primitif dan mengembalikan hasil operasi matematika.
+
+Kesimpulan: 
+Dalam pembuatan program dan memahami cara data diolah dan disimpan dalam komputer, dengan Tipe data primitif dalam C++ dapat menjadikan lebih efisien saat menyimpan dan memanipulasi data pada operasi dasar seperti aritmatika. 
+
+#### Full code Screenshot:
+![Screenshot (331)](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/91455543/22ed0660-6586-4184-909f-43fb86cc107b)
+=======
     return 0;
 }
 
@@ -327,11 +357,143 @@ map adalah struktur data yang lebih kompleks yang menyediakan akses berbasis key
 sedangkan array adalah struktur data sederhana dengan akses berbasis indeks,yang merupakan bilangan bulat. Dimana ukuran array ditentukan pada saat kompilasi dan tidak bisa berubah.Semua elemen array disimpan dalam urutan kontigu di memori.
 
 
+>>>>>>> 10825b934e862f6d27eb4c64d48648c0d4c3014f
 
+### 2. [Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!]
+
+Fungsi class dan struk adalah untuk mendefinisikan tipe data baru dengan data dan fungsi anggota.
+
+Fungsi class digunakan untuk mendefinisikan blueprint untuk objek. Fungsi ini dapat memungkinkan untuk mengelompokkan variabel (atribut) dan fungsi (metode) yang berhubungan menjadi satu unit kerja yang dapat memiliki konstruktor dan destruktor. Dimana anggota dan fungsi anggota dari class  adalah privat secara default. Fungsi ini secara umum digunakan untuk data yang lebih kompleks.
+
+```C++
+#include <iostream>
+using namespace std;
+
+// Definisi class
+class Mobil {
+public:
+    string merk;
+    string model;
+    int tahun;
+
+    // Fungsi untuk menampilkan data mobil
+    void display() {
+        cout << "Merk: " << merk << endl;
+        cout << "Model: " << model << endl;
+        cout << "Tahun: " << tahun << endl;
+    }
+};
+
+int main() {
+    // Membuat objek dari class Mobil
+    Mobil mobilSaya;
+    mobilSaya.merk = "Toyota";
+    mobilSaya.model = "Corolla";
+    mobilSaya.tahun = 2020;
+
+    // Memanggil fungsi display
+    mobilSaya.display();
+
+    return 0;
+}
+```
+
+#### Output:
+![Screenshot (334)](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/91455543/3f9d2356-bd68-4b54-990d-38739676928b)
+
+Penjelasan:
+Berdasarkan contoh di atas, class Mobil memiliki tiga atribut (merk, model, tahun) dan satu metode (display). Objek mobilSaya dibuat dari class Mobil dan metode display dipanggil untuk menampilkan data mobil tersebut.
+
+
+Fungsi Struct
+Fungsi struct digunakan untuk menggabungkan berbagai tipe data menjadi satu unit. Tujuannya untuk mendefinisikan struktur data yang kompleks, di mana dapat digunakan menyimpan data yang terkait dalam satu variabel. Fungsi ini mirip dengan fungsi class, hanya saja biasanya digunakan untuk struktur data yang lebih sederhana yang mana tidak memiliki konstruktor atau destruktor secara default. Anggota dan fungsi anggota dari struct secara default adalah public. Biasanya sering digunakan ketika hanya ingin menyimpan data tanpa memerlukan fungsi tambahan.
+
+#### Full code Screenshot:
+![Screenshot (328)](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/91455543/d37b4760-c0e3-4bc5-844a-7c5da32e3df6)
+
+```C++
+#include <iostream>
+using namespace std;
+
+// Definisi struct
+struct Mahasiswa {
+    string nama;
+    int umur;
+    float ipk;
+};
+
+int main() {
+    // Membuat objek struct
+    Mahasiswa mhs1;
+    mhs1.nama = "Budi";
+    mhs1.umur = 20;
+    mhs1.ipk = 3.5;
+
+    // Menampilkan data mahasiswa
+    cout << "Nama: " << mhs1.nama << endl;
+    cout << "Umur: " << mhs1.umur << " tahun" << endl;
+    cout << "IPK: " << mhs1.ipk << endl;
+
+    return 0;
+}
+```
+
+#### Output:
+![Screenshot (335)](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/91455543/6f44c440-409b-45f2-b25f-4cb3c8588ce2)
+
+Penjelasan:
+Berdasarkan contoh diatas, struct Mahasiswa digunakan untuk menyimpan informasi tentang mahasiswa,diantaranya nama, umur, dan IPK. Objek mhs1 berasal dari struct Mahasiswa dan digunakan untuk menyimpan dan menampilkan data mahasiswa tersebut. struct pada program ini berfungsi sebagai cara untuk mengelola data yang berhubungan dengan cara yang logis dan mudah diakses.
+
+#### Full code Screenshot:
+![Screenshot (329)](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/91455543/955929a9-d378-4169-9916-fb45bc4e5230)
+
+### 3. [Buatlah program menggunakan fungsi map. Jelaskan perbedaan dari array dan map!]
+
+Contoh program menggunakan fungsi map
+
+```C++
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main() {
+    // Membuat map dengan key tipe string dan value tipe int
+    map<string, int> umur;
+
+    // Menambahkan data ke dalam map
+    umur["Alice"] = 25;
+    umur["Bob"] = 28;
+    umur["Charlie"] = 32;
+
+    // Menampilkan semua data dalam map
+    for (const auto &pair : umur) {
+        cout << pair.first << " berumur " << pair.second << " tahun." << endl;
+    }
+
+    return 0;
+}
+```
+
+#### Output:
+![Screenshot (336)](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/91455543/501934f8-9892-4c0f-b382-22346a0fd1bb)
+
+Penjelasan:
+Berdasarkan program diatas dapat didefinisikan, map digunakan untuk menyimpan pasangan key-value di mana key adalah nama orang dan value adalah umurnya. map memungkinkan kita untuk mengakses elemen dengan key yang diberikan, yang tidak mungkin dilakukan dengan array.
+
+Perbedaan antara map dan array
+map adalah struktur data yang lebih kompleks yang menyediakan akses berbasis key dan memungkinkan penyimpanan elemen secara dinamis dengan urutan tertentu berdasarkan key.
+sedangkan array adalah struktur data sederhana dengan akses berbasis indeks,yang merupakan bilangan bulat. Dimana ukuran array ditentukan pada saat kompilasi dan tidak bisa berubah.Semua elemen array disimpan dalam urutan kontigu di memori.
+
+#### Full code Screenshot:
+![Screenshot (330)](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/91455543/5451e8de-2649-4d58-b507-78de737102d9)
 
 ## Kesimpulan
 Jadi berdasarkan tipe data yang sudah di pelajari bahwa tipe data primitif dapat memberikan dasar yang efisien untuk operasi dasar, tipe data abstrak memungkinkan struktur data yang lebih kompleks dan terorganisir, dan tipe data koleksi menyediakan cara untuk mengelola kumpulan data yang besar dengan lebih efektif..
 
 ## Referensi
 
+<<<<<<< HEAD
 [1] Meidyan P., Guntoro B., Rezania A., Yunjansyah, Andri S., Yesi S., Arsia R., Fadhila T., (2022). Algoritma dan Struktur Data.https://repository.penerbitwidina.com/media/publications/557434-algoritma-dan-struktur-data-2ceb12a5.pdf.
+=======
+[1] Meidyan P., Guntoro B., Rezania A., Yunjansyah, Andri S., Yesi S., Arsia R., Fadhila T., (2022). Algoritma dan Struktur Data.https://repository.penerbitwidina.com/media/publications/557434-algoritma-dan-struktur-data-2ceb12a5.pdf.
+>>>>>>> 10825b934e862f6d27eb4c64d48648c0d4c3014f
