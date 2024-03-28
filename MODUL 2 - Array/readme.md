@@ -4,18 +4,51 @@
 ## Dasar Teori
 Array adalah salah satu tipe data terstruktur yang digunakan dalam 
 Bahasa pemrograman seperti PHP,Pascal, JAVA, C++, Python. Tujuan penggunaan 
-array untuk mempermudah penyimpan data karena array berisi 
-komponen-komponen yang memiliki tipe data yang sama. Setiap anggota 
-array dapat diakses melalui suatu indeks. Array mempunyai beberapa 
-jenis seperti array 1 dimensi, array 2 dimensi dan array multidimensi, 
-dimana masing-masing array tersebut memiliki fungsi yang berbeda dalam 
-penggunaannya. Array 1 dimensi disebut dengan vektor, array 2 dimensi 
-sering disebut sebagai matriks sedangkan array yang memiliki dimensi 
-lebih dari 2(dua) yang disebut tensor.
+array untuk mempermudah penyimpan data karena array berisi komponen-komponen yang memiliki tipe data yang sama. Setiap anggota  array dapat diakses melalui suatu indeks. Array mempunyai beberapa jenis seperti array 1 dimensi, array 2 dimensi dan array multidimensi, dimana masing-masing array tersebut memiliki fungsi yang berbeda dalam penggunaannya. Array 1 dimensi disebut dengan vektor, array 2 dimensi sering disebut sebagai matriks sedangkan array yang memiliki dimensi lebih dari 2(dua) yang disebut tensor.
 
-Array merupakan sebuah tipe data terstruktur yang dapat diterapkan pada suatu 
-variabel yang dapat menyimpan banyak data dengan tipe sejenis atau 
-homogen. Array berfungsi untuk mempermudah dalam penyimpanan data.
+Array merupakan sebuah tipe data terstruktur yang dapat diterapkan pada suatu variabel yang dapat menyimpan banyak data dengan tipe sejenis atau homogen. Array berfungsi untuk mempermudah dalam penyimpanan data.
+
+###1. Array Satu Dimensi
+Array 1 dimensi atau yang sering disebut dengan vektor adalah suatu array yang value atau nilainya hanya ditunjukkan oleh satu indeks. 
+
+Array 1 dimensi dideklarasikan dengan variabel yang sudah dibentuk sebelumnya dan tidak dapat diubah selama program dijalankan. Secara umum, array 1 dimensi dideklarasikan dengan bentuk sebagai 
+berikut: 
+Nama array : array [1..n] of tipe_data
+
+Keterangan: 
+Nama array : nama array yang akan disimpan berisi elemen atau nilai
+1 : indeks awal elemen atau nilai, awal ini berupa konstanta tidak boleh nama variabel. Indeks awal bisa dimulai dengan angka 1 atau 0 tergantung Bahasa pemrograman. 
+N : indeks akhir yang menyatakan posisi/jumlah maksimum 
+array yang dapat ditampung. 
+Tipe_data : tipe data array yang digunakan, bisa berupa tipe data dasar atau tipe data bentukan.
+
+###2. Array Dua Dimensi
+Array 2 dimensi atau yang dapat digambarkan dengan matriks merupakan array sebuah perluasan dari array 1 dimensi, dimana jika pada array 1 dimensi hanya terdapat satu kolom dan satu baris maka pada array 2 dimensi tersusun atas beberapa elemen kolom dan beberapa elemen baris dengan 
+tipe data yang sama atau sejenis.
+
+11  4   90   6
+9   8   23   22
+31  15  29   7
+2   10  42   30
+12  32  11   78
+67  5   9    7
+43  10  11   9
+
+Susunan angka diatas menunjukkan matriks berdimensi 7 x 4, artinya terdiri dari 7 baris dan 4 kolom. Dalam pengisian array 2 dimensi dapat dilakukan dengan dua cara yaitu baris per baris (row major order) dan kolom per kolom (colomn major order). 
+Sebagai variabel dalam algoritma, array 2 dimensi dideklarasikan dengan bentuk umum seperti berikut ini:
+Indeks Kolom
+
+NamaArray : array [1..MaxBaris, 1..MaxKolom] of TypeData
+
+Keterangan : 
+NamaArray : nama array yang dibentuk
+MaxBaris  : batas maksimal baris array atau ukuran baris dari array
+MaxKolom  : batas maksimal kolom array atau ukuran kolom dari array
+TypeData  : tipe data dari array
+
+###3. Array Multidimensi
+Array multidimensi adalah struktur data yang memungkinkan kita untuk menyimpan data dalam bentuk tabel dengan lebih dari satu dimensi. Dalam bahasa pemrograman, array multidimensi sering disebut sebagai “array of arrays”.
+
 ## Guided 
 
 ### 1. Program Input Array Tiga Dimensi
