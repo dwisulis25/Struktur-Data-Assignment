@@ -2,9 +2,20 @@
 <p align="center">Dwi Sulistyani</p>
 
 ## Dasar Teori
+Array adalah salah satu tipe data terstruktur yang digunakan dalam 
+Bahasa pemrograman seperti PHP,Pascal, JAVA, C++, Python. Tujuan penggunaan 
+array untuk mempermudah penyimpan data karena array berisi 
+komponen-komponen yang memiliki tipe data yang sama. Setiap anggota 
+array dapat diakses melalui suatu indeks. Array mempunyai beberapa 
+jenis seperti array 1 dimensi, array 2 dimensi dan array multidimensi, 
+dimana masing-masing array tersebut memiliki fungsi yang berbeda dalam 
+penggunaannya. Array 1 dimensi disebut dengan vektor, array 2 dimensi 
+sering disebut sebagai matriks sedangkan array yang memiliki dimensi 
+lebih dari 2(dua) yang disebut tensor.
 
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
-
+Array merupakan sebuah tipe data terstruktur yang dapat diterapkan pada suatu 
+variabel yang dapat menyimpan banyak data dengan tipe sejenis atau 
+homogen. Array berfungsi untuk mempermudah dalam penyimpanan data.
 ## Guided 
 
 ### 1. Program Input Array Tiga Dimensi
