@@ -26,15 +26,7 @@ Tipe_data : tipe data array yang digunakan, bisa berupa tipe data dasar atau tip
 Array 2 dimensi atau yang dapat digambarkan dengan matriks merupakan array sebuah perluasan dari array 1 dimensi, dimana jika pada array 1 dimensi hanya terdapat satu kolom dan satu baris maka pada array 2 dimensi tersusun atas beberapa elemen kolom dan beberapa elemen baris dengan 
 tipe data yang sama atau sejenis.
 
-11  4   90   6
-9   8   23   22
-31  15  29   7
-2   10  42   30
-12  32  11   78
-67  5   9    7
-43  10  11   9
-
-Susunan angka diatas menunjukkan matriks berdimensi 7 x 4, artinya terdiri dari 7 baris dan 4 kolom. Dalam pengisian array 2 dimensi dapat dilakukan dengan dua cara yaitu baris per baris (row major order) dan kolom per kolom (colomn major order). 
+Dalam pengisian array 2 dimensi dapat dilakukan dengan dua cara yaitu baris per baris (row major order) dan kolom per kolom (colomn major order). 
 Sebagai variabel dalam algoritma, array 2 dimensi dideklarasikan dengan bentuk umum seperti berikut ini:
 Indeks Kolom
 
@@ -104,7 +96,9 @@ int main() {
 	}
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode diatas mendeklarasikan array tiga dimensi dengan yang ukuran 2x3x3. Lalu kita diminta untuk memasukkan nilai untuk setiap koordinat (x, y, z) elemen array.Setelah semua nilai selesai dimasukkan, program akan  menampilkan nilai yang telah dimasukkan oleh pengguna dalam bentuj tabel. Dalam setiap elemen dipisahkan oleh spasi, dan setiap baris dan lapisan dipisahkan oleh baris kosong.
+Jadi, program di atas menampilkan nilai-nilai yang dimasukkan oleh pengguna dan dengan array tiga dimensi.
+
 
 ### 2. Program Mencari Nilai Maksimal pada Array
 
@@ -145,7 +139,7 @@ int main() {
 	return 0; //Return 0 to indicate successful execution 
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+
 
 ## Unguided 
 
