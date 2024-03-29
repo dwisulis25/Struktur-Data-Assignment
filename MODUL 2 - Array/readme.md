@@ -15,11 +15,10 @@ Array 1 dimensi dideklarasikan dengan variabel yang sudah dibentuk sebelumnya da
 berikut: 
 Nama array : array [1..n] of tipe_data
 
-Keterangan: 
-Nama array : nama array yang akan disimpan berisi elemen atau nilai
-1 : indeks awal elemen atau nilai, awal ini berupa konstanta tidak boleh nama variabel. Indeks awal bisa dimulai dengan angka 1 atau 0 tergantung Bahasa pemrograman. 
+Nama array : nama array yang akan disimpan berisi elemen atau nilai,
+1 : indeks awal elemen atau nilai, awal ini berupa konstanta tidak boleh nama variabel. Indeks awal bisa dimulai dengan angka 1 atau 0 tergantung Bahasa pemrograman,
 N : indeks akhir yang menyatakan posisi/jumlah maksimum 
-array yang dapat ditampung. 
+array yang dapat ditampung,
 Tipe_data : tipe data array yang digunakan, bisa berupa tipe data dasar atau tipe data bentukan.
 
 ### 2. Array Dua Dimensi
@@ -32,11 +31,10 @@ Indeks Kolom
 
 NamaArray : array [1..MaxBaris, 1..MaxKolom] of TypeData
 
-Keterangan : 
-NamaArray : nama array yang dibentuk
-MaxBaris  : batas maksimal baris array atau ukuran baris dari array
-MaxKolom  : batas maksimal kolom array atau ukuran kolom dari array
-TypeData  : tipe data dari array
+NamaArray : nama array yang dibentuk,
+MaxBaris  : batas maksimal baris array atau ukuran baris dari array,
+MaxKolom  : batas maksimal kolom array atau ukuran kolom dari array,
+TypeData  : tipe data dari array.
 
 ### 3. Array Multidimensi
 Array multidimensi adalah struktur data yang memungkinkan kita untuk menyimpan data dalam bentuk tabel dengan lebih dari satu dimensi. Dalam bahasa pemrograman, array multidimensi sering disebut sebagai “array of arrays”.
