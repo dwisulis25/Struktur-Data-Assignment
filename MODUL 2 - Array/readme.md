@@ -189,12 +189,12 @@ int main() {
 
 }
 ```
-#### Output:
-
-
 Kode di atas digunakan untuk mencetak program yang meminta pengguna untuk memasukkan beberapa angka setelah itu program akan menampilkan data array, nomor genap, dan nomor ganjil berdasarkan input dari pengguna.
 
 Program akan meminta kita memasukkan angka-angka sebanyak elemen yang telah ditentukan. Kemudian program akan menampilkan semua angka yang telah di masukkan sebagai data array. Lalu untuk menampilkan nilai genap program akan memeriksa setiap angka dalam array dengan cara habis membagi 2, karena jika habis dibagi 2 maka menandakan bahwa angka tersebut genap sehingga program akan menampilkannya sebagai nomor genap. Sebaliknya apabila tidak habis di bagi 2 maka itu menandakan nomor ganjil dan program akan menampilkannya sebagai nomor ganjil.
+
+#### Output :
+
 
 #### Full code Screenshot:
 
@@ -207,10 +207,50 @@ Program akan meminta kita memasukkan angka-angka sebanyak elemen yang telah dite
 using namespace std;
 
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    int x_size, y_size, z_size;
+
+    cout << "Masukkan ukuran array (x y z): ";
+    cin >> x_size >> y_size >> z_size;
+
+    int arr[x_size][y_size][z_size];
+
+    for (int x = 0; x < x_size; x++) {
+        for (int y = 0; y < y_size; y++) {
+            for (int z = 0; z < z_size; z++) {
+                cout << "Input Array[" << x << "][" << y << "][" << z << "] = ";
+                cin >> arr[x][y][z];
+            }
+        }
+        cout << endl;
+    }
+
+    cout << "Data Array:" << endl;
+    for (int x = 0; x < x_size; x++) {
+        for (int y = 0; y < y_size; y++) {
+            for (int z = 0; z < z_size; z++) {
+                cout << "Array[" << x << "][" << y << "][" << z << "] = " << arr[x][y][z] << endl;
+            }
+        }
+    }
+
+    cout << endl;
+    cout << "Tampilan array:" << endl;
+    for (int x = 0; x < x_size; x++) {
+        for (int y = 0; y < y_size; y++) {
+            for (int z = 0; z < z_size; z++) {
+                cout << arr[x][y][z] << " ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
+
     return 0;
 }
+
 ```
+Jadi berdasarkan program di atas, pertama kita diminta untuk memasukkan ukuran array dalam tiga dimensi (x, y, dan z). Selanjutnya kita diminta untuk memasukan nilai elemen array. Setelah semua nilai dimasukkan, program akan menampilkan data array. Selain menampilkan data array, program juga menampilkan tampilan array.
+
 #### Output:
 
 
@@ -221,13 +261,8 @@ int main() {
 ### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!
 
 ```C++
-#include <iostream>
-using namespace std;
 
-int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
-    return 0;
-}
+
 ```
 #### Output :
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
