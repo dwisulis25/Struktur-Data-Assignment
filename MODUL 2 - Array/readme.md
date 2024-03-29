@@ -261,16 +261,63 @@ Jadi berdasarkan program di atas, pertama kita diminta untuk memasukkan ukuran a
 ### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!
 
 ```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Masukkan jumlah elemen array: ";
+    cin >> n;
+
+    int arr[n];
+    cout << "Masukkan " << n << " elemen array:\n";
+    for (int i = 0; i < n; ++i) {
+        cin >> arr[i];
+    }
+
+    // Mencari nilai maksimum
+    int max_val = arr[0];
+    for (int i = 1; i < n; ++i) {
+        if (arr[i] > max_val) {
+            max_val = arr[i];
+        }
+    }
+
+    // Mencari nilai minimum
+    int min_val = arr[0];
+    for (int i = 1; i < n; ++i) {
+        if (arr[i] < min_val) {
+            min_val = arr[i];
+        }
+    }
+
+    // Menghitung nilai rata-rata
+    int sum = 0;
+    for (int i = 0; i < n; ++i) {
+        sum += arr[i];
+    }
+    double average = static_cast<double>(sum) / n;
+
+    cout << "Nilai maksimum: " << max_val << endl;     #Untuk menyimpan nilai max
+    cout << "Nilai minimum: " << min_val << endl;     #Untuk menyimpan nilai min
+    cout << "Nilai rata-rata: " << average << endl;  #Untuk menyimpan nilai rata-rata
+    return 0;
+}
 
 
 ```
 #### Output :
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk mencetak program mencari nilai maksimum, minimum, dan rata-rata dari suatu array. Program akan meminta kita untuk memasukkan jumlah elemen dalam array, dan memasukkan nilai-nilai elemen array. Kemudian program akan mencari nilai maksimum dan minimum dari elemen-elemen array yang telah dimasukkan.
+Setelah itu Program akan melakukan perbandingan dari setiap elemen array dengan nilai maksimum dan minimum, dan akan memperbarui nilai-nilai tersebut jika ditemukan elemen yang tidak sesuai misalnya lebih besar atau lebih kecil. Untuk mencari rata-rata, program akan menghitung total dari semua elemen array. Selanjutnya nilai total akan dibagi dengan jumlah elemen untuk mendapatkan nilai rata-rata. Rata-rata akan disimpan oleh variabel average dalam bentuk bilangan desimal. Terakhir output nilai maksimum, minimun, dan rata-rata akan di tampilkan.
+
 
 #### Full code Screenshot :
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Array merupakan sebuah tipe data terstruktur yang dapat diterapkan pada suatu variabel yang dapat menyimpan banyak data dengan tipe sejenis atau homogen. Array berfungsi untuk mempermudah dalam penyimpanan data.
+Array dibedakan menjadi berbagai jenis antaranya:
+Array satu dimensi (atau vektor) adalah kumpulan elemen dengan tipe data yang sama. 
+Array dua dimensi (matriks) adalah tabel dua dimensi dengan baris dan kolom. Array tiga dimensi adalah ekstensi dari matriks ke ruang tiga dimensi. 
 
 ## Referensi
 [1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
