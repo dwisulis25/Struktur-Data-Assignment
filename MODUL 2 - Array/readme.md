@@ -152,14 +152,49 @@ Program diatas bekerja dengan cara meminta pengguna untuk memasukkan panjang arr
 using namespace std;
 
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    int n;
+    cout << "Masukkan jumlah elemen dalam array: ";
+    cin >> n;
+
+    int arr[n];
+    cout << "Masukkan " << n << " angka: ";
+    for (int i = 0; i < n; ++i) {
+        cin >> arr[i];
+    }
+
+    cout << "Data Array: ";
+    for (int i = 0; i < n; ++i) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    cout << "Nomor Genap: ";
+    for (int i = 0; i < n; ++i) {
+        if (arr[i] % 2 == 0) {
+            cout << arr[i] << " ";
+        }
+    }
+    cout << endl;
+
+    cout << "Nomor Ganjil: ";
+    for (int i = 0; i < n; ++i) {
+        if (arr[i] % 2 != 0) {
+            cout << arr[i] << " ";
+        }
+    }
+    cout << endl;
+
     return 0;
+}
+
 }
 ```
 #### Output:
 
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk mencetak program yang meminta pengguna untuk memasukkan beberapa angka setelah itu program akan menampilkan data array, nomor genap, dan nomor ganjil berdasarkan input dari pengguna.
+
+Program akan meminta kita memasukkan angka-angka sebanyak elemen yang telah ditentukan. Kemudian program akan menampilkan semua angka yang telah di masukkan sebagai data array. Lalu untuk menampilkan nilai genap program akan memeriksa setiap angka dalam array dengan cara habis membagi 2, karena jika habis dibagi 2 maka menandakan bahwa angka tersebut genap sehingga program akan menampilkannya sebagai nomor genap. Sebaliknya apabila tidak habis di bagi 2 maka itu menandakan nomor ganjil dan program akan menampilkannya sebagai nomor ganjil.
 
 #### Full code Screenshot:
 
