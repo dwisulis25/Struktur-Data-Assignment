@@ -140,6 +140,8 @@ int main() {
 }
 ```
 
+Program diatas bekerja dengan cara meminta pengguna untuk memasukkan panjang array / jumlah elemen. Dengan nilai panjang array harus lebih dari 0, jika tidak maka program akan memberikan pesan bahwa panjang array harus lebih dari 0 dengan mengembalikan nilai 1. Program akan mendeklarasikan array dengan ukuran sebanyak a. Lalu, pengguna diminta memasukkan nilai untuk setiap elemen array. Program melakukan iterasi melalui elemen-elemen array (mulai dari indeks 1). Jika nilai elemen lebih besar dari nilai maksimum yang telah ditemukan sebelumnya, maka nilai maksimum diperbarui dan lokasi indeks akan disimpan. Setelah semuanya selesai, program akan mencetak nilai maksimum.
+
 
 ## Unguided 
 
@@ -155,12 +157,12 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+
 
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
+
 
 
 ### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
@@ -175,12 +177,10 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
 
 
 ### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!
@@ -194,14 +194,10 @@ int main() {
     return 0;
 }
 ```
-#### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
-
+#### Output :
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 
-#### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/41e9641c-ad4e-4e50-9ca4-a0215e336b04)
-
+#### Full code Screenshot :
 
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
