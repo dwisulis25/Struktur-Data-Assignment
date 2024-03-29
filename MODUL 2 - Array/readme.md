@@ -320,4 +320,4 @@ Array satu dimensi (atau vektor) adalah kumpulan elemen dengan tipe data yang sa
 Array dua dimensi (matriks) adalah tabel dua dimensi dengan baris dan kolom. Array tiga dimensi adalah ekstensi dari matriks ke ruang tiga dimensi. 
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1] Meidyan P., Guntoro B., Rezania A., Yunjansyah, Andri S., Yesi S., Arsia R., Fadhila T., (2022). Algoritma dan Struktur Data.https://repository.penerbitwidina.com/media/publications/557434-algoritma-dan-struktur-data-2ceb12a5.pdf.
