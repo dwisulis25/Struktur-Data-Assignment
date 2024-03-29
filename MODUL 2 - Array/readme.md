@@ -184,18 +184,16 @@ int main() {
 
     return 0;
 }
-
-}
 ```
 Kode di atas digunakan untuk mencetak program yang meminta pengguna untuk memasukkan beberapa angka setelah itu program akan menampilkan data array, nomor genap, dan nomor ganjil berdasarkan input dari pengguna.
 
 Program akan meminta kita memasukkan angka-angka sebanyak elemen yang telah ditentukan. Kemudian program akan menampilkan semua angka yang telah di masukkan sebagai data array. Lalu untuk menampilkan nilai genap program akan memeriksa setiap angka dalam array dengan cara habis membagi 2, karena jika habis dibagi 2 maka menandakan bahwa angka tersebut genap sehingga program akan menampilkannya sebagai nomor genap. Sebaliknya apabila tidak habis di bagi 2 maka itu menandakan nomor ganjil dan program akan menampilkannya sebagai nomor ganjil.
 
 #### Output :
-
+![unguided1](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/0e2b8fb9-a14b-4102-8150-d02fcd319910)
 
 #### Full code Screenshot:
-
+![fullcode1](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/8bba36cd-6fb1-4da9-acb5-c5bb16a1e9fd)
 
 
 ### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
@@ -245,16 +243,14 @@ int main() {
 
     return 0;
 }
-
 ```
 Jadi berdasarkan program di atas, pertama kita diminta untuk memasukkan ukuran array dalam tiga dimensi (x, y, dan z). Selanjutnya kita diminta untuk memasukan nilai elemen array. Setelah semua nilai dimasukkan, program akan menampilkan data array. Selain menampilkan data array, program juga menampilkan tampilan array.
 
 #### Output:
-
-
+![unguided2](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/8c23328d-8bf4-4e0f-802f-651b42771bc4)
 
 #### Full code Screenshot:
-
+![fullcode2](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/1fba6653-8015-4046-a806-c22d6e694f2e)
 
 ### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!
 
@@ -296,20 +292,21 @@ int main() {
     }
     double average = static_cast<double>(sum) / n;
 
-    cout << "Nilai maksimum: " << max_val << endl;     #Untuk menyimpan nilai max
-    cout << "Nilai minimum: " << min_val << endl;     #Untuk menyimpan nilai min
-    cout << "Nilai rata-rata: " << average << endl;  #Untuk menyimpan nilai rata-rata
+    cout << "Nilai maksimum: " << max_val << endl;     //Untuk menyimpan nilai max
+    cout << "Nilai minimum: " << min_val << endl;     //Untuk menyimpan nilai min
+    cout << "Nilai rata-rata: " << average << endl;  //Untuk menyimpan nilai rata-rata
     return 0;
 }
-
-
 ```
 #### Output :
+![unguided3](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/1712fe89-1fa9-4bb1-8235-9197b32a882a)
+
 Kode di atas digunakan untuk mencetak program mencari nilai maksimum, minimum, dan rata-rata dari suatu array. Program akan meminta kita untuk memasukkan jumlah elemen dalam array, dan memasukkan nilai-nilai elemen array. Kemudian program akan mencari nilai maksimum dan minimum dari elemen-elemen array yang telah dimasukkan.
 Setelah itu Program akan melakukan perbandingan dari setiap elemen array dengan nilai maksimum dan minimum, dan akan memperbarui nilai-nilai tersebut jika ditemukan elemen yang tidak sesuai misalnya lebih besar atau lebih kecil. Untuk mencari rata-rata, program akan menghitung total dari semua elemen array. Selanjutnya nilai total akan dibagi dengan jumlah elemen untuk mendapatkan nilai rata-rata. Rata-rata akan disimpan oleh variabel average dalam bentuk bilangan desimal. Terakhir output nilai maksimum, minimun, dan rata-rata akan di tampilkan.
 
 
 #### Full code Screenshot :
+![fullcode3](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/da1e2cce-63a3-4b81-a7a0-3a69fe966d8b)
 
 ## Kesimpulan
 Array merupakan sebuah tipe data terstruktur yang dapat diterapkan pada suatu variabel yang dapat menyimpan banyak data dengan tipe sejenis atau homogen. Array berfungsi untuk mempermudah dalam penyimpanan data.
