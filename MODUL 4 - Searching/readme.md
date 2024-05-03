@@ -39,7 +39,17 @@ int main(){
 
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk 
+Kode yang Anda berikan adalah program C++ yang melakukan pencarian sederhana, dikenal sebagai Sequential Search atau Linear Search, untuk menemukan suatu nilai dalam array. Berikut adalah interpretasi dari kode tersebut:
+
+Program mendeklarasikan sebuah array data dengan 10 elemen integer.
+Nilai yang dicari, disimpan dalam variabel cari, adalah 10.
+Variabel boolean ketemu digunakan untuk menandai apakah nilai yang dicari telah ditemukan dalam array.
+Program menggunakan loop for untuk melalui setiap elemen dalam array data.
+Jika elemen yang sedang diperiksa sama dengan nilai cari, variabel ketemu diatur menjadi true dan loop dihentikan dengan break.
+Setelah loop, program mencetak pesan yang menunjukkan apakah nilai yang dicari ditemukan atau tidak.
+Jika nilai ditemukan, program juga mencetak indeks di mana nilai tersebut ditemukan.
+Output dari program akan tergantung pada isi array dan nilai yang dicari. Dalam kasus ini, karena nilai 10 ada dalam array data pada indeks ke-9 (indeks dimulai dari 0), program akan mencetak:.
 
 ### 2. Buatlah sebuah project untuk melakukan pencarian data dengan menggunakan Binary Search
 
@@ -111,7 +121,24 @@ int main() {
     return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk 
+Program C++ yang Anda berikan adalah contoh implementasi dari algoritma Selection Sort untuk mengurutkan array dan Binary Search untuk mencari elemen dalam array yang sudah diurutkan. Berikut adalah interpretasi dari kode tersebut:
+
+Deklarasi Array dan Variabel:
+bil_data adalah array yang berisi 7 bilangan integer.
+cari adalah variabel yang akan digunakan untuk menyimpan nilai yang ingin dicari oleh pengguna.
+Fungsi selection_sort:
+Fungsi ini mengimplementasikan algoritma Selection Sort untuk mengurutkan elemen dalam array bil_data.
+Algoritma ini bekerja dengan mencari elemen terkecil dalam array dan menukarnya dengan elemen pertama, kemudian mencari elemen terkecil kedua dan menukarnya dengan elemen kedua, dan seterusnya hingga seluruh array terurut.
+Fungsi binary_search:
+Setelah array diurutkan, fungsi binary_search digunakan untuk mencari nilai yang ditentukan oleh pengguna (cari) dalam array yang sudah diurutkan.
+Algoritma ini membagi array menjadi dua bagian, membandingkan nilai yang dicari dengan elemen tengah, dan mengulangi proses ini pada bagian array yang sesuai hingga nilai ditemukan atau seluruh array telah dicari.
+Fungsi main:
+Fungsi ini menampilkan array bil_data sebelum diurutkan.
+Meminta pengguna untuk memasukkan nilai yang ingin dicari (cari).
+Menampilkan array bil_data setelah diurutkan menggunakan fungsi selection_sort.
+Mencari nilai yang dimasukkan pengguna dalam array yang sudah diurutkan menggunakan fungsi binary_search.
+Jika nilai ditemukan, program akan mencetak indeks di mana nilai tersebut ditemukan. Jika tidak, program akan mencetak pesan bahwa data tidak ditemukan.
 
 ## Unguided 
 
@@ -119,17 +146,67 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 
 ```C++
 #include <iostream>
+#include <algorithm> // untuk std::sort
+#include <string>    // untuk std::string dan std::getline
+
 using namespace std;
 
+// Fungsi untuk melakukan binary search pada string
+bool binarySearch(const string& str, char value) {
+    int left = 0;
+    int right = str.length() - 1;
+
+    while (left <= right) {
+        int middle = left + (right - left) / 2;
+
+        if (str[middle] == value) {
+            return true; // Huruf ditemukan
+        } else if (str[middle] < value) {
+            left = middle + 1;
+        } else {
+            right = middle - 1;
+        }
+    }
+
+    return false; // Huruf tidak ditemukan
+}
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    string kalimat;
+    char huruf;
+
+    // Meminta user untuk memasukkan sebuah kalimat
+    cout << "Masukkan sebuah kalimat: ";
+    getline(cin, kalimat);
+
+    // Meminta user untuk memasukkan huruf yang ingin dicari
+    cout << "Masukkan huruf yang ingin Anda cari: ";
+    cin >> huruf;
+
+    // Mengurutkan kalimat
+    sort(kalimat.begin(), kalimat.end());
+
+    // Mencari huruf menggunakan binary search
+    bool found = binarySearch(kalimat, huruf);
+
+    // Menampilkan hasil
+    if (found) {
+        cout << "Huruf '" << huruf << "' ditemukan dalam kalimat." << endl;
+    } else {
+        cout << "Huruf '" << huruf << "' tidak ditemukan dalam kalimat." << endl;
+    }
+
     return 0;
 }
+
 ```
 #### Output:
 
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk
+Program di atas akan meminta pengguna untuk memasukkan sebuah kalimat dan huruf yang ingin dicari. Kemudian, program akan mengurutkan kalimat tersebut dan melakukan pencarian dengan Binary Search. Jika huruf ditemukan, program akan memberitahu pengguna bahwa huruf tersebut ditemukan; jika tidak, program akan memberitahu bahwa huruf tersebut tidak ditemukan.
+
+Perlu diingat bahwa Binary Search efektif untuk pencarian dalam kumpulan data yang besar dan terurut, tetapi mungkin tidak efisien untuk kalimat pendek atau untuk kasus di mana urutan huruf dalam kalimat penting. Untuk kasus seperti itu, pencarian linear mungkin lebih sesuai.
 
 #### Full code Screenshot:
 
@@ -137,17 +214,35 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 
 ```C++
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    string kalimat;
+    int jumlah_vokal = 0;
+
+    cout << "Masukkan sebuah kalimat: ";
+    getline(cin, kalimat);
+
+    // Menghitung jumlah huruf vokal
+    for (int i = 0; i < kalimat.length(); i++) {
+        char huruf = tolower(kalimat[i]); // Mengubah huruf menjadi lowercase untuk memudahkan perbandingan
+        if (huruf == 'a' || huruf == 'e' || huruf == 'i' || huruf == 'o' || huruf == 'u') {
+            jumlah_vokal++;
+        }
+    }
+
+    cout << "Jumlah huruf vokal dalam kalimat adalah: " << jumlah_vokal << endl;
+
     return 0;
 }
+
 ```
 #### Output:
 
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk 
+Program ini akan meminta pengguna untuk memasukkan sebuah kalimat. Kemudian, program akan mengiterasi setiap karakter dalam kalimat tersebut, memeriksa apakah karakter tersebut adalah huruf vokal (a, e, i, o, u) dengan membandingkannya dalam bentuk huruf kecil (lowercase), dan menghitung jumlah total huruf vokal yang ditemukan. Hasilnya akan ditampilkan ke pengguna..
 
 #### Full code Screenshot:
 
@@ -158,14 +253,38 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 using namespace std;
 
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    int data[] = {9, 4, 1, 4, 7, 10, 5, 4, 12, 4};
+    int n = sizeof(data) / sizeof(data[0]); // Menghitung jumlah elemen dalam array
+    int cari = 4;
+    int jumlah = 0;
+
+    // Algoritma Sequential Search
+    for (int i = 0; i < n; i++) {
+        if (data[i] == cari) {
+            jumlah++;
+        }
+    }
+
+    cout << "Angka " << cari << " ditemukan sebanyak " << jumlah << " kali dalam array." << endl;
+
     return 0;
 }
+
 ```
 #### Output:
 
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk 
+Kode yang Anda berikan adalah program C++ yang menghitung berapa kali angka 4 muncul dalam array data. Mari kita interpretasikan kode tersebut:
+
+Inisialisasi Array dan Variabel:
+Array data berisi elemen-elemen: 9, 4, 1, 4, 7, 10, 5, 4, 12, dan 4.
+Variabel n dihitung sebagai jumlah elemen dalam array data.
+Algoritma Sequential Search:
+Program menggunakan loop for untuk melalui setiap elemen dalam array data.
+Jika elemen yang sedang diperiksa sama dengan angka 4, variabel jumlah ditambah 1.
+Output:
+Program mencetak berapa kali angka 4 muncul dalam array data..
 
 #### Full code Screenshot:
 
