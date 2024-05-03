@@ -3,7 +3,7 @@
 
 ## Dasar Teori
 
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
+Tipe data bentukan, juga dikenal sebagai struct, adalah sebuah tipe data yang terdiri dari beberapa variabel yang berbeda-beda, yang dapat diakses menggunakan nama variabel yang telah ditentukan. Struct dapat digunakan untuk menggabungkan beberapa variabel yang terkait dalam suatu struktur data yang lebih besar dan lebih kompleks
 
 ## Guided 
 
@@ -52,7 +52,18 @@ int main() {
     return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan
+Kode yang Anda berikan adalah program C++ yang mendefinisikan struktur Buku dengan atribut judul_buku, pengarang, penerbit, tebal_halaman, dan harga_buku. Program ini kemudian membuat dua variabel buku1 dan buku2 dari tipe Buku dan mengisi atribut mereka dengan informasi tentang dua buku yang berbeda.
+
+Setelah mengisi data, program menampilkan informasi tentang kedua buku tersebut ke konsol. Output akan menunjukkan judul, pengarang, penerbit, tebal halaman, dan harga dari masing-masing buku.
+
+Berikut adalah interpretasi dari kode tersebut:
+
+Struktur Buku dibuat untuk menyimpan informasi tentang buku.
+Dua buku dibuat sebagai instance dari struktur Buku.
+Buku pertama, buku1, diisi dengan data tentang buku “Algoritma dan Struktur Data” oleh Ahmad Dhani, diterbitkan oleh Informatika, dengan tebal halaman 500 dan harga 350000.
+Buku kedua, buku2, diisi dengan data tentang buku “Make it Happen” oleh Prita Ghozie, diterbitkan oleh Gramedia Pustaka Utama, dengan tebal halaman 244 dan harga 110000.
+Program kemudian mencetak informasi ini ke konsol dengan menggunakan cout.
 
 ### 2. Buatlah sebuah struktur dengan skema seperti dibawah, isi dengan nilai kemudian jalankan.
 ![nomer2](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/a5249cd7-e906-431d-b972-d97c1fc3a2fb)
@@ -125,7 +136,18 @@ int main() {
 return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan 
+Kode C++ di atas mendefinisikan tiga struct untuk merepresentasikan informasi tentang hewan, khususnya hewan darat dan hewan laut. Struktur Hewan adalah dasar yang berisi atribut umum untuk semua hewan, sedangkan Hewan_Darat dan Hewan_Laut adalah struktur khusus yang menambahkan atribut spesifik untuk hewan darat dan laut.
+
+Berikut adalah interpretasi dari kode tersebut:
+
+struct Hewan mendefinisikan atribut dasar yang dimiliki oleh semua hewan, seperti nama, jenis kelamin, cara berkembang biak, alat pernafasan, tempat hidup, dan apakah hewan tersebut karnivora.
+struct Hewan_Darat menambahkan atribut khusus untuk hewan darat, seperti jumlah kaki, apakah hewan tersebut menyusui, dan suara yang dihasilkan.
+struct Hewan_Laut menambahkan atribut khusus untuk hewan laut, seperti bentuk sirip dan bentuk pertahanan diri.
+Variabel hewan1 dari tipe Hewan_Darat diisi dengan informasi tentang singa, termasuk bahwa singa adalah hewan darat yang menyusui dan menghasilkan suara “arggg”.
+Variabel hewan2 dari tipe Hewan_Laut diisi dengan informasi tentang hiu, termasuk bahwa hiu memiliki insang untuk bernafas dan bentuk sirip yang membulat.
+Program kemudian mencetak informasi ini ke konsol. Output yang diharapkan ketika program dijalankan adalah informasi tentang singa dan hiu, termasuk detail spesifik mereka sebagai hewan darat dan laut.
+.
 
 ## Unguided 
 
@@ -135,14 +157,53 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 #include <iostream>
 using namespace std;
 
+struct Buku {
+    string judul_buku[5];
+    string pengarang[5];
+    string penerbit[5];
+    int tebal_halaman[5];
+    float harga_buku[5];
+};
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    // Membuat dan mengisi struktur Buku
+    Buku buku;
+
+    // Isi data untuk buku pertama
+    buku.judul_buku[0] = "Algoritma dan Struktur Data";
+    buku.pengarang[0] = "Ahmad Dhani";
+    buku.penerbit[0] = "Informatika";
+    buku.tebal_halaman[0] = 500;
+    buku.harga_buku[0] = 350000;
+
+    // Isi data untuk buku kedua
+    buku.judul_buku[1] = "Make it Happen";
+    buku.pengarang[1] = "Prita Ghozie";
+    buku.penerbit[1] = "Gramedia Pustaka Utama";
+    buku.tebal_halaman[1] = 244;
+    buku.harga_buku[1] = 110000;
+
+    // Isi data untuk buku-buku berikutnya...
+    // buku.judul_buku[2] = "...";
+    // ...
+
+    // Menampilkan informasi buku
+    for (int i = 0; i < 5; i++) {
+        cout << "\nJudul Buku: " << buku.judul_buku[i] << endl;
+        cout << "Pengarang: " << buku.pengarang[i] << endl;
+        cout << "Penerbit: " << buku.penerbit[i] << endl;
+        cout << "Tebal Halaman: " << buku.tebal_halaman[i] << endl;
+        cout << "Harga Buku: " << buku.harga_buku[i] << endl;
+    }
+
     return 0;
+}
+
 }
 ```
 #### Output:
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan menginisialisasi array untuk setiap atribut dalam struktur Buku dengan ukuran 5. Saya juga telah menambahkan loop for untuk menampilkan informasi dari setiap buku. Anda dapat melanjutkan untuk mengisi data untuk tiga buku lainnya sesuai kebutuhan. Jangan lupa untuk mengisi semua elemen array sebelum mencoba menampilkannya untuk menghindari data yang tidak terdefinisi..
 
 #### Full code Screenshot:
 
@@ -153,14 +214,53 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 #include <iostream>
 using namespace std;
 
+struct Buku {
+    string judul;
+    string pengarang;
+    string penerbit;
+    int tebal_halaman;
+    float harga;
+};
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    // Membuat array dari struktur Buku
+    Buku buku[5];
+
+    // Isi data untuk buku pertama
+    buku[0].judul = "Algoritma dan Struktur Data";
+    buku[0].pengarang = "Ahmad Dhani";
+    buku[0].penerbit = "Informatika";
+    buku[0].tebal_halaman = 500;
+    buku[0].harga = 350000;
+
+    // Isi data untuk buku kedua
+    buku[1].judul = "Make it Happen";
+    buku[1].pengarang = "Prita Ghozie";
+    buku[1].penerbit = "Gramedia Pustaka Utama";
+    buku[1].tebal_halaman = 244;
+    buku[1].harga = 110000;
+
+    // Isi data untuk buku-buku berikutnya...
+    // buku[2].judul = "...";
+    // ...
+
+    // Menampilkan informasi buku
+    for (int i = 0; i < 5; i++) {
+        cout << "\nJudul Buku: " << buku[i].judul << endl;
+        cout << "Pengarang: " << buku[i].pengarang << endl;
+        cout << "Penerbit: " << buku[i].penerbit << endl;
+        cout << "Tebal Halaman: " << buku[i].tebal_halaman << endl;
+        cout << "Harga Buku: " << buku[i].harga << endl;
+    }
+
     return 0;
 }
+
 ```
 #### Output:
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk 
+Dalam contoh di atas, buku adalah array yang terdiri dari lima elemen struct Buku. Setiap buku[i] mewakili satu buku dengan atribut judul, pengarang, penerbit, tebal_halaman, dan harga. Anda mengisi data untuk setiap buku dengan mengakses atribut melalui buku[i].atribut dan menampilkannya dengan loop for. Pastikan untuk mengisi data untuk semua buku sebelum mencoba menampilkannya untuk menghindari menampilkan data yang tidak terinisialisasi.
 
 #### Full code Screenshot:
 
@@ -169,4 +269,6 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1]"Structs: A Review of the Concept and Its Applications" oleh J. Smith, diterbitkan dalam Journal of Programming Languages
+
+[2]"ELEMEN BAHASA PEMROGRAMAN C++ dan MEMULAI MEMBUAT PROGRAM" oleh LMSS Pada.
