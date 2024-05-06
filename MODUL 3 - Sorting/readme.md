@@ -2,10 +2,22 @@
 <p align="center">Dwi Sulistyani</p>
 
 ## Dasar Teori
+### 1. Konsep Dasar Sorting
 Algoritma sorting adalah algoritma untuk meletakkan kumpulan elemen data ke dalam urutan tertentu, berdasarkan satu atau beberapa kunci ke dalam tiap-tiap elemen. Betdasarkan uritanya algoritma sorting dibagi menjadi dua jenis:
-### a. Ascending: Pengurutan berdasarkan dari kecil ke besar. Contohnya: a, b, c, d, e.
-### b. Descending : Pengurutan berdasarkan dari besar ke kecil. Contohnya : e, d, c, b, a.
+a. Ascending: Pengurutan berdasarkan dari kecil ke besar. Contohnya: a, b, c, d, e.
+b. Descending : Pengurutan berdasarkan dari besar ke kecil. Contohnya : e, d, c, b, a.
 
+### 2. Insertion Sort
+### Konsep Dasar Inseetion Sort
+Cara mengurutkanya di cek satu persatu mulai dari yang kedua sampai dengan yang terakhir.  Apabila ditemukan data sebelumnya, maka data tersebut disisipkan pada posisi yang sesuai.
+
+### Pseudocode Algoritma Insertion Sort
+```C++
+#include <iostream>
+using namespace std;
+
+for i = n-1
+        set j-i
 ## Guided 
 
 ### 1. Mengurutkan secara ascending untuk data numerik bertipe double menggunakan Algoritma Bubble Sort
