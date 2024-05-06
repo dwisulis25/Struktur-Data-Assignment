@@ -12,12 +12,23 @@ b. Descending : Pengurutan berdasarkan dari besar ke kecil. Contohnya : e, d, c,
 Cara mengurutkanya di cek satu persatu mulai dari yang kedua sampai dengan yang terakhir.  Apabila ditemukan data sebelumnya, maka data tersebut disisipkan pada posisi yang sesuai.
 
 ### Pseudocode Algoritma Insertion Sort
+
 ```C++
 #include <iostream>
 using namespace std;
 
 for i = n-1
         set j-i
+        set t = a[j]
+        repeat while j > 0 and a[j-2] > t
+        move a[j-1] to right
+        end repeat
+        set a[j] - t
+and for
+
+return 0;
+}
+```
 ## Guided 
 
 ### 1. Mengurutkan secara ascending untuk data numerik bertipe double menggunakan Algoritma Bubble Sort
