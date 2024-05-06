@@ -2,8 +2,9 @@
 <p align="center">Dwi Sulistyani</p>
 
 ## Dasar Teori
-
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
+Algoritma sorting adalah algoritma untuk meletakkan kumpulan elemen data ke dalam urutan tertentu, berdasarkan satu atau beberapa kunci ke dalam tiap-tiap elemen. Betdasarkan uritanya algoritma sorting dibagi menjadi dua jenis:
+### a. Ascending: Pengurutan berdasarkan dari kecil ke besar. Contohnya: a, b, c, d, e.
+### b. Descending : Pengurutan berdasarkan dari besar ke kecil. Contohnya : e, d, c, b, a.
 
 ## Guided 
 
