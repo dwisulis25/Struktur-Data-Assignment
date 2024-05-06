@@ -29,6 +29,33 @@ and for
 return 0;
 }
 ```
+
+### Prosedur Insertion Sort dalam bahasa C++
+
+```C++
+#include <iostream>
+using namespace std;
+
+void inseetion_sort(int arr[], int length) {
+ int i, j,tmp;
+
+      for (i = 1; i < length; i++) {
+             j = i;
+
+             while (j > 0 && arr[j - 1] > arr[j]) {
+               tmp = arr[j - 1];
+               arr[j] = arr[j - 1];
+               arr[j - 1] = tmp;
+               j--;
+             }//end of while loop
+       }//end of for loop
+}
+
+return 0;
+}
+```
+         
+
 ## Guided 
 
 ### 1. Mengurutkan secara ascending untuk data numerik bertipe double menggunakan Algoritma Bubble Sort
