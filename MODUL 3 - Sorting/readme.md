@@ -264,16 +264,43 @@ Ketika program dijalankan, outputnya akan menunjukkan array a sebelum dan setela
 #include <iostream>
 using namespace std;
 
+void selectionSort(float arr[], int n) {
+    int i, j, max_idx;
+    float temp;
+
+    for (i = 0; i < n-1; i++) {
+        max_idx = i;
+        for (j = i+1; j < n; j++)
+          if (arr[j] > arr[max_idx])
+            max_idx = j;
+
+        temp = arr[max_idx];
+        arr[max_idx] = arr[i];
+        arr[i] = temp;
+    }
+}
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    float ips[] = {3.8, 2.9, 3.3, 4.0, 2.4};
+    int n = sizeof(ips)/sizeof(ips[0]);
+
+    selectionSort(ips, n);
+
+    cout << "IPS terurut dari yang terbesar hingga terkecil: ";
+    for (int i = 0; i < n; i++)
+        cout << ips[i] << " ";
+    cout << endl;
+
     return 0;
+}
+
 }
 ```
 #### Output:
 
 
 Kode di atas digunakan untuk mencetak 
-
+Program ini mendefinisikan fungsi selectionSort yang mengambil array arr dan ukuran array n sebagai parameter. Fungsi ini kemudian mengurutkan array menggunakan algoritma Selection Sort. Di dalam fungsi main, array ips didefinisikan dengan nilai-nilai yang diberikan, dan fungsi selectionSort dipanggil untuk mengurutkan nilai-nilai tersebut. Setelah itu, program mencetak nilai-nilai IPS yang telah terurut
 
 #### Full code Screenshot:
 
@@ -281,17 +308,49 @@ Kode di atas digunakan untuk mencetak
 
 ```C++
 #include <iostream>
+#include <string>
+#include <vector>
 using namespace std;
 
+void bubbleSort(vector<string>& arr) {
+    int i, j;
+    bool swapped;
+    for (i = 0; i < arr.size()-1; i++) {
+        swapped = false;
+        for (j = 0; j < arr.size()-i-1; j++) {
+            if (arr[j] > arr[j+1]) {
+                swap(arr[j], arr[j+1]);
+                swapped = true;
+            }
+        }
+        if (!swapped)
+            break;
+    }
+}
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    vector<string> warga = {"siti", "situ", "sana", "ana", "ani", "caca", "cici", "dida", "dodo", "dadi"};
+    bubbleSort(warga);
+
+    cout << "Nama warga setelah diurutkan: ";
+    for (const string& nama : warga)
+        cout << nama << " ";
+    cout << endl;
+
     return 0;
+}
+
 }
 ```
 #### Output:
 
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk program dalam bahasa C++ yang digunakan untuk mengurutkan nama-nama warga berdasarkan alfabet. Program tersebut menggunakan algoritma Bubble Sort.
+Program di atas menggunakan vector untuk menyimpan nama-nama warga.
+Fungsi bubbleSort mengurutkan elemen-elemen dalam vector berdasarkan alfabet.
+Variabel swapped digunakan untuk memeriksa apakah ada pertukaran yang terjadi selama proses pengurutan.
+Setelah pengurutan selesai, program mencetak nama-nama warga yang telah terurut.
+
 
 #### Full code Screenshot:
 
