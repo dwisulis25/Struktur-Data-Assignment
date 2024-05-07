@@ -84,6 +84,36 @@ void bubble_sort(int arr[], int length){
 return 0;
 }
 ```
+
+### 4. Selection Sort
+#### Konsep Dasar Algoritma Selection Sort:
+Cara mengurutkannya adalah dengan membandingkan elemen sekarang dengan elemen yang berikutnya sampai terakhir. Jika ditemukan elemen paling kecil, kemudian ditukar dengan elemen sekarang.
+
+#### Contoh Prosedur Selection Sort
+
+```C++
+#include <iostream>
+using namespace std;
+
+void selectionSort(int arr[], int n) {
+    int pos_min,temp;
+      for (int i=0; i < n-1; i++) {
+      if (arr[j] < arr[pos_min])
+         pos_min=j;
+      }
+
+    if (pos_min != i) {
+       temp = arr[i];
+       arr[i] = arr[pos_min];
+       arr[pos_min] = temp;
+    }
+  }
+}
+
+}
+return 0;
+}
+```
   
 ## Guided 
 
