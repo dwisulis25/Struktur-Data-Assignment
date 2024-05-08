@@ -252,10 +252,6 @@ Memanggil fungsi insertion_sort untuk mengurutkan array.
 Memanggil fungsi print_array untuk mencetak array sebelum dan setelah diurutkan secara descending.
 Ketika program dijalankan, outputnya akan menunjukkan array a sebelum dan setelah diurutkan dengan algoritma Insertion Sort secara descending. Algoritma ini efektif untuk dataset yang kecil dan hampir terurut, dengan kompleksitas waktu rata-rata dan terburuk O(n^2).
 
-### Full code screenshoot
-
-### Output
-
 ## Unguided 
 
 ### 1. Kelas S1 IF 2016 G memiliki 5 mahasiswa. Pada akhir semester mereka menerima lembar Indeks Prestasi Semester (IPS), masing-masing mahasiswa tersebut memiliki IPS sebagai berikut: {3.8, 2.9, 3.3, 4.0, 2.4}. Buatlah program untuk mengurutkan IPS mahasiswa tersebut dari yang terbesar hingga terkecil dengan menggunakan algoritma Selection Sort!
@@ -293,16 +289,15 @@ int main() {
 
     return 0;
 }
-
-}
 ```
 #### Output:
-
+![unguided1](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/ca859128-77b2-47bb-aadf-bac1e3fd026b)
 
 Kode di atas digunakan untuk mencetak 
 Program ini mendefinisikan fungsi selectionSort yang mengambil array arr dan ukuran array n sebagai parameter. Fungsi ini kemudian mengurutkan array menggunakan algoritma Selection Sort. Di dalam fungsi main, array ips didefinisikan dengan nilai-nilai yang diberikan, dan fungsi selectionSort dipanggil untuk mengurutkan nilai-nilai tersebut. Setelah itu, program mencetak nilai-nilai IPS yang telah terurut
 
 #### Full code Screenshot:
+![fullcode1](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/a9878bb5-2d01-4aca-b72f-edf94a832837)
 
 ### 2. Pak RT memiliki 10 warga dengan nama: siti, situ, sana, ana, ani, caca, cici, dida, dodo, dan dadi. Supaya mudah dalam melakukan pencarian, Pak RT akan mengurutkan namanama tersebut sesuai dengan alfabet. Buatlah program untuk membantu Pak RT dengan menggunakan algoritma Bubble Sort!
 
@@ -339,11 +334,9 @@ int main() {
 
     return 0;
 }
-
-}
 ```
 #### Output:
-
+![unguided2](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/7f325814-4041-4994-9fca-c98283b97a81)
 
 Kode di atas digunakan untuk program dalam bahasa C++ yang digunakan untuk mengurutkan nama-nama warga berdasarkan alfabet. Program tersebut menggunakan algoritma Bubble Sort.
 Program di atas menggunakan vector untuk menyimpan nama-nama warga.
@@ -353,6 +346,7 @@ Setelah pengurutan selesai, program mencetak nama-nama warga yang telah terurut.
 
 
 #### Full code Screenshot:
+![fullcode2](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/5902a7b4-f60c-44f0-82a9-e2d66bed65ed)
 
 ### 3. Buatlah program yang meminta user menginputkan suatu bilangan n dan meminta user untuk menginputkan sejumlah n karakter. Kemudian program akan melakukan sorting secara menaik (ascending) dan menurun (descending)!
 ![3](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/85603b6b-3047-4c6b-9640-44022fdfe7dd)
