@@ -198,10 +198,9 @@ int main() {
 
     return 0;
 }
-
 ```
 #### Output:
-
+![unguided1](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/b39e3846-13bf-4ed4-b273-a0c9cffc18f8)
 
 Kode di atas digunakan untuk
 Program di atas akan meminta pengguna untuk memasukkan sebuah kalimat dan huruf yang ingin dicari. Kemudian, program akan mengurutkan kalimat tersebut dan melakukan pencarian dengan Binary Search. Jika huruf ditemukan, program akan memberitahu pengguna bahwa huruf tersebut ditemukan; jika tidak, program akan memberitahu bahwa huruf tersebut tidak ditemukan.
@@ -209,6 +208,7 @@ Program di atas akan meminta pengguna untuk memasukkan sebuah kalimat dan huruf 
 Perlu diingat bahwa Binary Search efektif untuk pencarian dalam kumpulan data yang besar dan terurut, tetapi mungkin tidak efisien untuk kalimat pendek atau untuk kasus di mana urutan huruf dalam kalimat penting. Untuk kasus seperti itu, pencarian linear mungkin lebih sesuai.
 
 #### Full code Screenshot:
+![fullcode1](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/395447ea-faa6-420d-b9d5-c70d7777c40e)
 
 ### 2. Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!
 
@@ -236,15 +236,15 @@ int main() {
 
     return 0;
 }
-
 ```
 #### Output:
-
+![unguided2](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/940c3f09-525c-4bcc-abc8-da962581709d)
 
 Kode di atas digunakan untuk 
 Program ini akan meminta pengguna untuk memasukkan sebuah kalimat. Kemudian, program akan mengiterasi setiap karakter dalam kalimat tersebut, memeriksa apakah karakter tersebut adalah huruf vokal (a, e, i, o, u) dengan membandingkannya dalam bentuk huruf kecil (lowercase), dan menghitung jumlah total huruf vokal yang ditemukan. Hasilnya akan ditampilkan ke pengguna..
 
 #### Full code Screenshot:
+![fullcode2](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/ac31787f-55ba-4dd3-9bd5-9d92dec58d17)
 
 ### 3. Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!
 
@@ -269,10 +269,9 @@ int main() {
 
     return 0;
 }
-
 ```
 #### Output:
-
+![unguided3](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/805677f1-7435-41b3-bebe-e6bd49f72bb9)
 
 Kode di atas digunakan untuk 
 Kode yang Anda berikan adalah program C++ yang menghitung berapa kali angka 4 muncul dalam array data. Mari kita interpretasikan kode tersebut:
@@ -287,7 +286,7 @@ Output:
 Program mencetak berapa kali angka 4 muncul dalam array data..
 
 #### Full code Screenshot:
-
+![fullcode3](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/65552230-7534-4088-bd57-9c081d1ff100)
 
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
