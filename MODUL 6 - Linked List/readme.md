@@ -399,7 +399,13 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 
 ## Unguided 
 
-### 1. Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan usia mahasiswa, dengan menggunakan inputan dari user.
+### 1. Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan usia mahasiswa, dengan menggunakan inputan dari user. Lakukan operasi berikut: 
+<br>a. Masukkan data sesuai urutan berikut. (Gunakan insert depan, belakang atau tengah). Data pertama yang dimasukkan adalah nama dan usia anda.</br>
+<br>b. Hapus data Akechi</br>
+<br>c. Tambahkan data berikut diantara John dan Jane : Futaba	18</br>
+<br>d. Tambahkan data berikut diawal : Igor	20</br>
+<br>e. Ubah data Michael menjadi : Reyn	18</br>
+<br>f. Tampilkan seluruh data</br>
 
 ```C++
 #include <iostream>
@@ -417,7 +423,27 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 #### Full code Screenshot:
 
 ### 2. Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama produk dan harga.
-
+Case:
+1.	Tambahkan produk Azarine dengan harga 65000 diantara Somethinc dan Skintific
+2.	Hapus produk wardah
+3.	Update produk Hanasui menjadi Cleora dengan harga 55.000
+4.	Tampilkan menu seperti dibawah ini
+    <br>Toko Skincare Purwokerto
+  	<br>1.	Tambah Data
+    <br>2.	Hapus Data
+    <br>3.	Update Data
+    <br>4.	Tambah Data Urutan Tertentu
+    <br>5.	Hapus Data Urutan Tertentu
+    <br>6.	Hapus Seluruh Data
+    <br>7.	Tampilkan Data
+    <br>8.	Exit</br>
+    <br>Pada menu 7, tampilan akhirnya akan menjadi seperti dibawah ini :</br>
+        <br>Nama Produk	    Harga
+        <br>Originote	    60.000
+        <br>Somethinc	    150.000
+        <br>Azarine	        65.000
+        <br>Skintific	    100.000
+        <br>Cleora	        55.000
 ```C++
 #include <iostream>
 using namespace std;
