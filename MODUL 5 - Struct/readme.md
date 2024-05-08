@@ -198,15 +198,14 @@ int main() {
 
     return 0;
 }
-
-}
 ```
 #### Output:
+![unguded1](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/4e0ce90a-5dfe-4171-8d5a-1060a6eebe59)
 
 Kode di atas digunakan menginisialisasi array untuk setiap atribut dalam struktur Buku dengan ukuran 5. Saya juga telah menambahkan loop for untuk menampilkan informasi dari setiap buku. Anda dapat melanjutkan untuk mengisi data untuk tiga buku lainnya sesuai kebutuhan. Jangan lupa untuk mengisi semua elemen array sebelum mencoba menampilkannya untuk menghindari data yang tidak terdefinisi..
 
 #### Full code Screenshot:
-
+![fullcode1](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/15b80c85-f6d5-4272-8cbc-28941cd7bda6)
 
 ### 2. Apa yang terjadi jika deklarasi variabel struct yang dibuat pada tugas guided I, berjenis Array. Bagaimana cara mengisi data dan menampilkannya ?
 
@@ -255,15 +254,15 @@ int main() {
 
     return 0;
 }
-
 ```
 #### Output:
+![unguided2](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/0aa5eee9-ed93-49f7-997d-379c5d4bddca)
 
 Kode di atas digunakan untuk 
 Dalam contoh di atas, buku adalah array yang terdiri dari lima elemen struct Buku. Setiap buku[i] mewakili satu buku dengan atribut judul, pengarang, penerbit, tebal_halaman, dan harga. Anda mengisi data untuk setiap buku dengan mengakses atribut melalui buku[i].atribut dan menampilkannya dengan loop for. Pastikan untuk mengisi data untuk semua buku sebelum mencoba menampilkannya untuk menghindari menampilkan data yang tidak terinisialisasi.
 
 #### Full code Screenshot:
-
+![fullcode2](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/45df1ae5-3d46-4d71-bd6b-788e3c491b6b)
 
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
