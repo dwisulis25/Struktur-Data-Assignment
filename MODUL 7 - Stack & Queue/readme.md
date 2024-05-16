@@ -151,6 +151,8 @@ int main() {
 ```
 Kode di atas merupakan kode dengan struktur data stack menggunakan array. Output dari kode diatas akan mencetak daftar buku dalam stack, status stack, dan perubahan yang terjadi setelah operasi tertentu dilakukan.
 
+
+
 ### 2. Guided 2
 
 ```C++
@@ -245,7 +247,7 @@ int main() {
     return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas merupakan kode sistem antrian yang di dalamnya terdapat operasi dasar seperti enqueue untuk menambahkan data ke antrian, dequeue untuk menghapus data dari antrian, isFull dan isEmpty untuk memeriksa kondisi antrian, dan fungsi untuk melihat isi antrian dan menghitung jumlah elemen di dalamnya. Juga fungsi main untuk melakukan beberapa operasi antrian.
 
 ## Unguided 
 
