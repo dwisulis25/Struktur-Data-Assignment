@@ -3,7 +3,38 @@
 
 ## Dasar Teori
 
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
+### STACK
+Stack adalah struktur data sederhana yang digunakan untuk menyimpan data (mirip
+dengan Linked Lists). Dalam tumpukan, urutan kedatangan data penting. Sebuah tumpukan piring di kafetaria adalah contoh bagus dari tumpukan. Piring ditambahkan ke tumpukan saat mereka dibersihkan dan ditempatkan di bagianatas. Ketika sebuah piring dibutuhkan, diambil dari bagian atas tumpukan. Piring pertama yang ditempatkan di tumpukan adalah yang terakhir digunakan. Definisi: Sebuah tumpukan adalah daftar terurut di mana penyisipan dan penghapusan dilakukan di satu ujung, disebut atas. Elemen terakhir yang
+dimasukkan adalah yang pertama dihapus. Oleh karena itu, disebut daftar Last in
+First out (LIFO).
+Operasi pada stack melibatkan beberapa fungsi dasar yang dapat dilakukan pada
+struktur data ini. Berikut adalah beberapa operasi umum pada stack: Push (Masukkan): Menambahkan elemen ke dalam tumpukan pada posisi paling atas atau ujung, Pop (Keluarkan): Menghapus elemen dari posisi paling atas atau ujung tumpukan,Top (Atas): Mendapatkan nilai atau melihat elemen teratas pada tumpukan tanpa menghapusnya, IsEmpty (Kosong): Memeriksa apakah tumpukan kosong atau tidak, IsFull (Penuh): Memeriksa apakah tumpukan penuh atau tidak (terutama pada implementasi tumpukan dengan kapasitas terbatas), Size (Ukuran): Mengembalikan jumlah elemen yang ada dalam tumpukan, Peek (Lihat): Melihat nilai atau elemen pada posisi tertentu dalam tumpukan
+tanpa menghapusnya, Clear (Hapus Semua): Mengosongkan atau menghapus semua elemen dari tumpukan, Search (Cari): Mencari keberadaan elemen tertentu dalam tumpukan.
+
+### QUEUE
+Queue adalah struktur data yang digunakan untuk menyimpan data dengan metode
+FIFO (First-In First-Out). Data yang pertama dimasukkan ke dalam queue akan
+menjadi data yang pertama pula untuk dikeluarkan dari queue. Queue mirip dengan
+konsep antrian pada kehidupan sehari-hari, dimana konsumen yang datang lebih
+dulu akan dilayani terlebih dahulu.
+Implementasi queue dapat dilakukan dengan menggunakan array atau linked list.
+Struktur data queue terdiri dari dua pointer yaitu front dan rear. Front/head adalah
+pointer ke elemen pertama dalam queue dan rear/tail/back adalah pointer ke elemen
+terakhir dalam queue.
+
+Perbedaan antara stack dan queue terdapat pada aturan penambahan dan
+penghapusan elemen. Pada stack, operasi penambahan dan penghapusan elemen
+dilakukan di satu ujung. Elemen yang terakhir diinputkan akan berada paling dengan
+dengan ujung atau dianggap paling atas sehingga pada operasi penghapusan, elemen
+teratas tersebut akan dihapus paling awal, sifat demikian dikenal dengan LIFO.
+
+Pada Queue, operasi tersebut dilakukan ditempat berbeda (melalui salah satu ujung)
+karena perubahan data selalu mengacu pada Head, maka hanya ada 1 jenis insert
+maupun delete. Prosedur ini sering disebut Enqueue dan Dequeue pada kasus Queue.
+Untuk Enqueue, cukup tambahkan elemen setelah elemen terakhir Queue, dan untuk
+Dequeue, cukup "geser"kan Head menjadi elemen selanjutnya.
+Operasi pada Queue: enqueue() : menambahkan data ke dalam queue, dequeue() : mengeluarkan data dari queue, peek() : mengambil data dari queue tanpa menghapusnya, isEmpty() : mengecek apakah queue kosong atau tidak, isFull() : mengecek apakah queue penuh atau tidak, size() : menghitung jumlah elemen dalam queue.
 
 ## Guided 
 
@@ -282,17 +313,108 @@ Kode di atas digunakan untuk mengecek suatu kalimat apakah suatu kalimat polindr
 
 ```C++
 #include <iostream>
+#include <string>
 using namespace std;
 
+const int maksimalQueue = 5;
+int front = 0;
+int back = 0;
+string queueTeller[maksimalQueue];
+
+bool isFull() {
+    return back == maksimalQueue;
+}
+
+bool isEmpty() {
+    return back == 0;
+}
+
+void enqueueAntrian(string data) {
+    if (isFull()) {
+        cout << "Antrian penuh." << endl;
+    } else {
+        queueTeller[back] = data;
+        back++;
+    }
+}
+
+void dequeueAntrian() {
+    if (isEmpty()) {
+        cout << "Antrian kosong." << endl;
+    } else {
+        cout << "Mengeluarkan: " << queueTeller[front] << endl;
+        for (int i = 0; i < back - 1; i++) {
+            queueTeller[i] = queueTeller[i + 1];
+        }
+        back--;
+    }
+}
+
+void viewQueue() {
+    if (isEmpty()) {
+        cout << "Antrian kosong." << endl;
+    } else {
+        cout << "Data antrian teller:" << endl;
+        for (int i = 0; i < back; i++) {
+            cout << i + 1 << ". " << queueTeller[i] << endl;
+        }
+    }
+}
+
+void clearQueue() {
+    back = 0;
+    cout << "Antrian telah dikosongkan." << endl;
+}
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    int pilihan;
+    string data;
+
+    do {
+        cout << "\nMenu Antrian Teller:\n";
+        cout << "1. Tambah Antrian\n";
+        cout << "2. Keluarkan Antrian\n";
+        cout << "3. Lihat Antrian\n";
+        cout << "4. Kosongkan Antrian\n";
+        cout << "5. Keluar\n";
+        cout << "Pilih menu: ";
+        cin >> pilihan;
+        cin.ignore(); // Mengabaikan newline setelah input angka
+
+        switch (pilihan) {
+            case 1:
+                if (isFull()) {
+                    cout << "Antrian penuh." << endl;
+                } else {
+                    cout << "Masukkan nama: ";
+                    getline(cin, data);
+                    enqueueAntrian(data);
+                }
+                break;
+            case 2:
+                dequeueAntrian();
+                break;
+            case 3:
+                viewQueue();
+                break;
+            case 4:
+                clearQueue();
+                break;
+            case 5:
+                cout << "Terima kasih telah menggunakan program antrian teller." << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid. Silakan coba lagi." << endl;
+        }
+    } while (pilihan != 5);
+
     return 0;
 }
+
 ```
 #### Output:
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
-
+Kode di atas merupakan program inputan teller yang dimodifikasi menjadi program inputan user dan menu. Kode tersebut dimodifikasi dengan menambahkan menu untuk memungkinkan pengguna agar dapat menambahkan antrian (enqueueAntrian),mengeluarkan antrian (dequeueAntrian), melihat isi antrian (viewQueue), mengosongkan antrian (clearQueue). Sehingga program akan terus menampilkan menu sampai pengguna memilih untuk keluar.
 #### Full code Screenshot:
 
 
@@ -300,4 +422,5 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts,
+problems, Interview Questions. CareerMonk Publications.
