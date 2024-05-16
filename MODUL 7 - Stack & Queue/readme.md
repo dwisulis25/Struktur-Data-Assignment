@@ -223,16 +223,57 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 
 ```C++
 #include <iostream>
-using namespace std;
+#include <stack>
+#include <string>
+#include <algorithm>
+
+bool isPalindrome(const std::string &sentence) {
+    std::stack<char> stack;
+    std::string cleaned;
+
+    // Hapus semua karakter non-alfabet dan konversi ke huruf kecil
+    for (char ch : sentence) {
+        if (isalpha(ch)) {
+            cleaned.push_back(tolower(ch));
+        }
+    }
+
+    // Masukkan setengah pertama kalimat ke dalam stack
+    for (size_t i = 0; i < cleaned.length() / 2; i++) {
+        stack.push(cleaned[i]);
+    }
+
+    // Jika panjang kalimat ganjil, lewati karakter tengah
+    size_t start = cleaned.length() / 2 + cleaned.length() % 2;
+
+    // Bandingkan setengah kedua kalimat dengan isi stack
+    for (size_t i = start; i < cleaned.length(); i++) {
+        if (stack.top() != cleaned[i]) {
+            return false;
+        }
+        stack.pop();
+    }
+    return true;
+}
 
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    std::string sentence;
+    std::cout << "Masukkan kalimat: ";
+    std::getline(std::cin, sentence);
+
+    if (isPalindrome(sentence)) {
+        std::cout << "Kalimat tersebut adalah palindrom.\n";
+    } else {
+        std::cout << "Kalimat tersebut bukan palindrom.\n";
+    }
+
     return 0;
 }
+
 ```
 #### Output:
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk mengecek suatu kalimat apakah suatu kalimat polindrom atau bukan. Pertama program akan menghapus karakter yang bukan huruf dan mengubah semua huruf menjadi huruf kecil, disini program menggunakan stack dengan prinsip LIFO. Selanjutnya program akan mengabaikan huruf ditengah apabila terdapat karakter ganjil. Selanjutnya program akan membandingkan apakah kalimat sama atau tidak. Apabila cocok maka kalimat tersebut adalah polindrom.
 
 #### Full code Screenshot:
 
