@@ -149,7 +149,7 @@ int main() {
     return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas merupakan kode dengan struktur data stack menggunakan array. Output dari kode diatas akan mencetak daftar buku dalam stack, status stack, dan perubahan yang terjadi setelah operasi tertentu dilakukan.
 
 ### 2. Guided 2
 
