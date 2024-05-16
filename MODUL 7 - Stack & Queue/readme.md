@@ -421,7 +421,11 @@ Kode di atas merupakan program inputan teller yang dimodifikasi menjadi program 
 
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Jadi stack adalah struktur data sederhana yang digunakan untuk menyimpan data (mirip
+dengan Linked Lists). Stack bekerja secara LIFO (Last In, First Out), di mana elemen terakhir yang ditambahkan adalah yang pertama dikeluarkan. Hal ini efisien dalam penggunaan memori. 
+
+Queue adalah struktur data yang digunakan untuk menyimpan data dengan metode
+FIFO (First-In First-Out). Data yang pertama dimasukkan ke dalam queue. Dimana Queue mirip dengan konsep antrian dalam kehidupan sehari-hari atau suatu hal yang memperhatikan urutan. 
 
 ## Referensi
 Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts,
