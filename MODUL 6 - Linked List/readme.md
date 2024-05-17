@@ -692,7 +692,7 @@ Menambahkan produk “Azarine” dengan harga 65.000 di antara produk “Somethi
 #### Full code Screenshot:
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Linked list adalah struktur data linier yang terdiri dari node yang saling terhubung melalui pointer. Linked list terbagi menjadi beberapa jenis yaitu single, double, dan circular. Linked List memiliki kelebihan pada penggunaan memori dan fleksibekitas. Adapun kekurangannya yaitu memiliki akses acak yang lebih lambat dibandingkan array.
 
 ## Referensi
 [1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
