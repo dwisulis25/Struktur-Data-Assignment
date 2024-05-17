@@ -2,8 +2,33 @@
 <p align="center">Dwi Sulistyani</p>
 
 ## Dasar Teori
+Pencarian (Searching) yaitu proses menemukan suatu nilai tertentu
+pada kumpulan data. Hasil pencarian adalah salah satu dari tiga keadaan
+ini: data ditemukan, data ditemukan lebih dari satu, atau data tidak
+ditemukan. Searching juga dapat dianggap sebagai proses pencarian suatu
+data di dalam sebuah array dengan cara mengecek satu persatu pada
+setiap index baris atau setiap index kolomnya dengan menggunakan teknik
+perulangan untuk melakukan pencarian data. Terdapat 2 metode pada
+algoritma Searching, yaitu:
 
+### a. Sequential Search
+Sequential Search merupakan salah satu algoritma pencarian data
+yang biasa digunakan untuk data yang berpola acak atau belum terurut.
+Sequential search juga merupakan teknik pencarian data dari array yang
+paling mudah, dimana data dalam array dibaca satu demi satu dan
+diurutkan dari index terkecil ke index terbesar, maupun sebaliknya. Konsep
+Sequential Search yaitu: Membandingkan setiap elemen pada array satu per satu secara berurut, Proses pencarian dimulai dari indeks pertama hingga indeks terakhir, Proses pencarian akan berhenti apabila data ditemukan. Jika hingga akhir array data masih juga tidak ditemukan, maka proses pencarian tetap akan dihentikan, proses perulangan pada pencarian akan terjadi sebanyak jumlah Nelemen pada array.
 
+### b. Binary Search
+Binary Search termasuk ke dalam interval search, dimana algoritma ini merupakan algoritma pencarian pada array/list dengan elemen terurut. Pada metode ini, data harus diurutkan terlebih dahulu dengan cara data
+dibagi menjadi dua bagian (secara logika), untuk setiap tahap pencarian.
+Dalam penerapannya algoritma ini sering digabungkan dengan algoritma sorting karena data yang akan digunakan harus sudah terurut terlebih dahulu. Konsep Binary Search:
+Data diambil dari posisi 1 sampai posisi akhir N, Kemudian data akan dibagi menjadi dua untuk mendapatkan posisi data tengah, selanjutnya data yang dicari akan dibandingkan dengan data yang berada di posisi tengah, apakah lebih besar atau lebih kecil, apabila data yang dicari lebih besar dari data tengah, maka dapat dipastikan bahwa data yang dicari kemungkinan berada di sebelah kanan dari data tengah. Proses pencarian selanjutnya akan dilakukan pembagian data menjadi dua bagian pada bagian kanan dengan acuan posisi data tengah akan menjadi posisi awal untuk pembagian tersebut, apabila data yang dicari lebih kecil dari data tengah, maka dapat
+dipastikan bahwa data yang dicari kemungkinan berada di sebelah
+kiri dari data tengah. Proses pencarian selanjutnya akan dilakukan
+pembagian data menjadi dua bagian pada bagian kiri. Dengan acuan posisi data tengah akan menjadi posisi akhir untuk pembagian
+selanjutnya, apabila data belum ditemukan, maka pencarian akan dilanjutkan
+dengan kembali membagi data menjadi dua, namun apabila data bernilai sama, maka data yang dicari langsung ditemukan dan pencarian dihentikan.
 
 ## Guided 
 
