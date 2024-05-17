@@ -3,7 +3,73 @@
 
 ## Dasar Teori
 
-Tipe data bentukan, juga dikenal sebagai struct, adalah sebuah tipe data yang terdiri dari beberapa variabel yang berbeda-beda, yang dapat diakses menggunakan nama variabel yang telah ditentukan. Struct dapat digunakan untuk menggabungkan beberapa variabel yang terkait dalam suatu struktur data yang lebih besar dan lebih kompleks
+### 2.1 Variabel
+Analogi dari variabel seperti sebuah tempat untuk menampung atau menyimpan suatu data dengan tipe data tertentu. Format penulisan/deklarasi variabel adalah tipe_data nama_variabel, contoh int berat, string mata_kuliah,char jenis_kelamin. Secara default sebuah variabel hanya dapat menampung sebuah nilai misalnya variabel berat hanya dapat menampung satu nilai berat
+175 kg, tidak bisa diisi lebih dari satu. Jika diinginkan dapat menampung lebih
+dari satu nilai maka deklarasikan variabel sebagai array, dengan format penulisan tipe_data nama_variabel [banyak data]. Variabel terbagi menjadi 2 jenis yakni variabel lokal dan global. Variabel Lokal: 
+Dibuat/dideklarasikan didalam
+fungsi/prosedur, dikenali/dapat dipanggil hanya oleh fungsi atau prosedur yang
+mendeklarasikannya. Variabel Global:
+Dibuat/dideklarasikan diluar fungsi
+atau prosedur,dikenali atau dipanggil oleh semua fungsi atau prosedur yang ada didalam
+program.
+
+### 2.2 Struktur (Struct)
+Merupakan tipe data bentukan yang terdiri dari beberapa tipe data standar
+maupun tipe data bentukan lainnya yang telah didefinisikan sebelumnya.
+Sebagaimana telah disinggung sebelumnya, keyword yang digunakan untuk
+membuat/mendeklarasikan sebuah struktur yakni struct. Terdapat banyak format
+penulisan diantaranya :
+
+### 1.
+```C++
+#include <iostream>
+using namespace std;
+
+struct {
+string namaDepan;
+string namaBelakang;
+int usia;
+char jenis_kelamin;
+}namaVariabelStrukA, namaVariabelStrukB;
+
+return 0;
+}
+```
+
+### 2.
+``` C++
+#include <iostream>
+using namespace std;
+
+struct namaTipe{
+string namaDepan;
+string namaTengah;
+string namaBelakang;
+}; struct namaTipe namaVariabelStrukA, namaVariabelStrukB;
+
+return 0;
+}
+```
+
+### 3.
+```C++
+#include <iostream>
+using namespace std;
+
+typedef struct {
+string namaDepan;
+string namaTengah;
+string namaBelakang;
+}namaTipe;
+namaTipe namaVariabelStrukA, namaVariabelStrukB;
+
+return 0;
+}
+```
+
+Tipe data struct yang telah dibuat (menggunakan cara 2 dan 3) menjadi tipe
+data standar yang penggunaannya sama dengan tipe data standar lainnya.
 
 ## Guided 
 
@@ -268,6 +334,4 @@ Dalam contoh di atas, buku adalah array yang terdiri dari lima elemen struct Buk
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
 
 ## Referensi
-[1]"Structs: A Review of the Concept and Its Applications" oleh J. Smith, diterbitkan dalam Journal of Programming Languages
-
-[2]"ELEMEN BAHASA PEMROGRAMAN C++ dan MEMULAI MEMBUAT PROGRAM" oleh LMSS Pada.
+Sjukani, Moh. 2007. Struktur Data (Algoritma & Struktur Data 2) dengan C, C++. Jakarta : Penerbit Mitra Wacana Media.
