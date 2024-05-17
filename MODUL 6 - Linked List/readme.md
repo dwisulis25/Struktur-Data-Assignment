@@ -422,16 +422,121 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 
 ```C++
 #include <iostream>
+#include <string>
+
 using namespace std;
 
+struct Mahasiswa {
+    string nama;
+    int usia;
+    Mahasiswa* next;
+};
+
+void insertDepan(Mahasiswa** head, string nama, int usia) {
+    Mahasiswa* new_node = new Mahasiswa();
+    new_node->nama = nama;
+    new_node->usia = usia;
+    new_node->next = (*head);
+    (*head) = new_node;
+}
+
+void insertBelakang(Mahasiswa** head, string nama, int usia) {
+    Mahasiswa* new_node = new Mahasiswa();
+    Mahasiswa* last = *head;
+    new_node->nama = nama;
+    new_node->usia = usia;
+    new_node->next = NULL;
+    if (*head == NULL) {
+        *head = new_node;
+        return;
+    }
+    while (last->next != NULL) {
+        last = last->next;
+    }
+    last->next = new_node;
+}
+
+void insertTengah(Mahasiswa* prev_node, string nama, int usia) {
+    if (prev_node == NULL) {
+        cout << "Node sebelumnya tidak boleh NULL";
+        return;
+    }
+    Mahasiswa* new_node = new Mahasiswa();
+    new_node->nama = nama;
+    new_node->usia = usia;
+    new_node->next = prev_node->next;
+    prev_node->next = new_node;
+}
+
+void hapusNode(Mahasiswa** head, string key) {
+    Mahasiswa* temp = *head, *prev;
+    if (temp != NULL && temp->nama == key) {
+        *head = temp->next;
+        delete temp;
+        return;
+    }
+    while (temp != NULL && temp->nama != key) {
+        prev = temp;
+        temp = temp->next;
+    }
+    if (temp == NULL) return;
+    prev->next = temp->next;
+    delete temp;
+}
+
+void ubahData(Mahasiswa* head, string namaLama, string namaBaru, int usiaBaru) {
+    Mahasiswa* temp = head;
+    while (temp != NULL) {
+        if (temp->nama == namaLama) {
+            temp->nama = namaBaru;
+            temp->usia = usiaBaru;
+            return;
+        }
+        temp = temp->next;
+    }
+}
+
+void cetakList(Mahasiswa* node) {
+    while (node != NULL) {
+        cout << node->nama << " " << node->usia << endl;
+        node = node->next;
+    }
+}
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    Mahasiswa* head = NULL;
+    
+    // a. Masukkan data Anda
+    insertDepan(&head, "NamaAnda", 20); // Ganti "NamaAnda" dengan nama Anda dan "20" dengan usia Anda
+    
+    // d. Tambahkan data Igor di awal
+    insertDepan(&head, "Igor", 20);
+    
+    // b. Hapus data Akechi
+    hapusNode(&head, "Akechi");
+    
+    // c. Tambahkan data Futaba di antara John dan Jane
+    // Kode ini asumsikan bahwa John ada di list dan berada tepat sebelum Jane
+    Mahasiswa* temp = head;
+    while (temp != NULL && temp->nama != "John") {
+        temp = temp->next;
+    }
+    if (temp != NULL) {
+        insertTengah(temp, "Futaba", 18);
+    }
+    
+    // e. Ubah data Michael menjadi Reyn
+    ubahData(head, "Michael", "Reyn", 18);
+    
+    // f. Tampilkan seluruh data
+    cetakList(head);
+    
     return 0;
 }
 ```
 #### Output:
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk menyimpan dan mengelola data mahasiswa.
 
 #### Full code Screenshot:
 
@@ -459,16 +564,130 @@ Case:
         <br>Cleora	        55.000
 ```C++
 #include <iostream>
+#include <iomanip>
+#include <string>
+
 using namespace std;
 
+struct Produk {
+    string nama;
+    int harga;
+    Produk* prev;
+    Produk* next;
+};
+
+void tambahData(Produk** head, Produk** tail, string nama, int harga, string namaSetelah) {
+    Produk* new_node = new Produk();
+    new_node->nama = nama;
+    new_node->harga = harga;
+    
+    if (*head == NULL) {
+        new_node->prev = NULL;
+        new_node->next = NULL;
+        *head = new_node;
+        *tail = new_node;
+        return;
+    }
+    
+    Produk* temp = *head;
+    while (temp != NULL && temp->nama != namaSetelah) {
+        temp = temp->next;
+    }
+    
+    if (temp != NULL) {
+        new_node->next = temp->next;
+        new_node->prev = temp;
+        if (temp->next != NULL) {
+            temp->next->prev = new_node;
+        } else {
+            *tail = new_node;
+        }
+        temp->next = new_node;
+    } else {
+        cout << "Produk " << namaSetelah << " tidak ditemukan." << endl;
+    }
+}
+
+void hapusData(Produk** head, Produk** tail, string nama) {
+    Produk* temp = *head;
+    while (temp != NULL && temp->nama != nama) {
+        temp = temp->next;
+    }
+    
+    if (temp == NULL) {
+        cout << "Produk " << nama << " tidak ditemukan." << endl;
+        return;
+    }
+    
+    if (temp->prev != NULL) {
+        temp->prev->next = temp->next;
+    } else {
+        *head = temp->next;
+    }
+    
+    if (temp->next != NULL) {
+        temp->next->prev = temp->prev;
+    } else {
+        *tail = temp->prev;
+    }
+    
+    delete temp;
+}
+
+void updateData(Produk* head, string namaLama, string namaBaru, int hargaBaru) {
+    Produk* temp = head;
+    while (temp != NULL && temp->nama != namaLama) {
+        temp = temp->next;
+    }
+    
+    if (temp != NULL) {
+        temp->nama = namaBaru;
+        temp->harga = hargaBaru;
+    } else {
+        cout << "Produk " << namaLama << " tidak ditemukan." << endl;
+    }
+}
+
+void tampilkanData(Produk* head) {
+    cout << "Nama Produk\tHarga" << endl;
+    while (head != NULL) {
+        cout << left << setw(15) << head->nama << "\t" << head->harga << endl;
+        head = head->next;
+    }
+}
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    Produk* head = NULL;
+    Produk* tail = NULL;
+    
+    // Tambahkan data produk di sini
+    // Contoh: tambahData(&head, &tail, "Originote", 60000, "");
+    
+    // Case 1: Tambahkan produk Azarine dengan harga 65000 diantara Somethinc dan Skintific
+    tambahData(&head, &tail, "Azarine", 65000, "Somethinc");
+    
+    // Case 2: Hapus produk wardah
+    hapusData(&head, &tail, "wardah");
+    
+    // Case 3: Update produk Hanasui menjadi Cleora dengan harga 55.000
+    updateData(head, "Hanasui", "Cleora", 55000);
+    
+    // Case 4: Tampilkan menu
+    // Implementasi menu dapat dilakukan di sini
+    
+    // Contoh tampilan data
+    tampilkanData(head);
+    
     return 0;
 }
 ```
 #### Output:
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Struktur Produk mendefinisikan tipe data untuk menyimpan informasi produk, termasuk nama dan harga, serta pointer ke produk sebelumnya (prev) dan berikutnya (next) dalam list. Fungsi tambahData menambahkan produk baru ke dalam list setelah produk tertentu yang ditentukan oleh namaSetelah.
+Fungsi hapusData menghapus produk dengan nama tertentu dari list. Fungsi updateData memperbarui informasi produk dengan nama tertentu, mengganti nama dan harga produk tersebut. Fungsi tampilkanData mencetak informasi semua produk dalam list ke konsol, menampilkan nama produk dan harga dalam format tabel.
+Dalam fungsi main, program melakukan operasi berikut:
+
+Menambahkan produk “Azarine” dengan harga 65.000 di antara produk “Somethinc” dan “Skintific”. Menghapus produk dengan nama “wardah”. Memperbarui produk “Hanasui” menjadi “Cleora” dengan harga baru 55.000.
 
 #### Full code Screenshot:
 
