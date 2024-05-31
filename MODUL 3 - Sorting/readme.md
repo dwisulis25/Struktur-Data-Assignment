@@ -164,25 +164,19 @@ int main() {
  	return 0;
 }
 ```
-Kode di atas digunakan untuk
-Kode C++ di atas adalah implementasi dari algoritma Bubble Sort untuk mengurutkan array berisi bilangan bertipe double secara ascending (menaik). Berikut adalah penjelasan dari setiap bagian kode:
+Kode di atas digunakan untuk implementasi dari algoritma Bubble Sort untuk mengurutkan array berisi bilangan bertipe double secara ascending (menaik). Berikut penjelasannya: 
 
-Fungsi bubble_sort:
-Menerima dua parameter: sebuah array arr dan panjang array length.
-Menggunakan variabel not_sorted sebagai penanda apakah array sudah terurut atau belum.
-Melakukan iterasi dengan while loop selama array belum terurut.
-Di dalam while loop, ada for loop yang berjalan dari awal array hingga elemen yang belum terurut.
-Jika elemen saat ini (arr[i]) lebih besar dari elemen berikutnya (arr[i + 1]), maka kedua elemen tersebut ditukar posisinya.
+Fungsi bubble_sort diatas digunakan untuk 
+menerima dua parameter: sebuah array arr dan panjang array length. Lalu menggunakan variabel not_sorted sebagai penanda apakah array sudah terurut atau belum. Setelah itu iterasi dilakukan dengan while loop selama array belum terurut.
+
+Apabila elemen saat ini (arr[i]) lebih besar dari elemen berikutnya (arr[i + 1]), maka kedua elemen tersebut ditukar posisinya.
 Jika ada pertukaran, not_sorted diatur kembali ke true untuk melanjutkan proses sorting.
-Fungsi print_array:
-Menerima array a dan panjang array length sebagai parameter.
-Mencetak semua elemen array ke layar dengan menggunakan for loop.
+
+Untuk fungsi print_array:
+Digunakan untuk menerima array a dan panjang array length sebagai parameter.
+
 Fungsi main:
-Mendeklarasikan array a dengan 6 elemen bertipe double.
-Mencetak urutan bilangan sebelum dan setelah dilakukan sorting.
-Memanggil fungsi bubble_sort untuk mengurutkan array.
-Memanggil fungsi print_array untuk mencetak array sebelum dan setelah diurutkan.
-Ketika program dijalankan, outputnya akan menunjukkan array a sebelum dan setelah diurutkan dengan algoritma Bubble Sort. Algoritma ini memiliki kompleksitas waktu rata-rata dan terburuk O(n^2), yang berarti waktu eksekusinya meningkat secara kuadratik dengan jumlah elemen yang diurutkan.
+Untuk mendeklarasikan array a dengan 6 elemen bertipe double, mencetak urutan bilangan sebelum dan setelah dilakukan sorting,memanggil fungsi bubble_sort untuk mengurutkan array, memanggil fungsi print_array untuk mencetak array sebelum dan setelah diurutkan. Saat program dijalankan, output akan menunjukkan array a sebelum dan setelah diurutkan dengan algoritma Bubble Sort. 
 
 ## Output
 ## Screenshoot
@@ -232,25 +226,17 @@ int main() {
 
 }
 ```
-Kode di atas digunakan untuk 
-Kode C++ di atas adalah implementasi dari algoritma Insertion Sort untuk mengurutkan array berisi karakter secara descending (dari terbesar hingga terkecil). Berikut adalah penjelasan dari setiap bagian kode:
+Kode di atas digunakan untuk implementasi algoritma Insertion Sort untuk mengurutkan array berisi karakter secara descending (dari terbesar hingga terkecil). Berikut Penjelasannya:
 
 Fungsi insertion_sort:
-Menerima dua parameter: sebuah array arr dan panjang array length.
-Menggunakan dua variabel indeks, i dan j, untuk menelusuri array.
-for loop dimulai dari indeks kedua array (indeks 1) karena elemen pertama dianggap sudah terurut.
-while loop membandingkan elemen yang sedang diperiksa (arr[j]) dengan elemen sebelumnya (arr[j - 1]).
-Jika elemen sebelumnya lebih kecil dari elemen yang sedang diperiksa, kedua elemen tersebut ditukar posisinya.
-Proses ini berlanjut hingga semua elemen telah diperiksa dan array terurut secara descending.
+Untuk menerima dua parameter: sebuah array arr dan panjang array length, menggunakan dua variabel indeks, i dan j, untuk menelusuri array, for loop dimulai dari indeks kedua array (indeks 1) karena elemen pertama dianggap sudah terurut, while loop membandingkan elemen yang sedang diperiksa (arr[j]) dengan elemen sebelumnya (arr[j - 1]). Apabila elemen sebelumnya lebih kecil dari elemen yang sedang diperiksa, kedua elemen tersebut ditukar posisinya. Proses akan berlanjut hingga semua elemen telah diperiksa dan array terurut secara descending.
+
 Fungsi print_array:
-Menerima array a dan panjang array length sebagai parameter.
-Mencetak semua elemen array ke layar dengan menggunakan for loop.
+Untuk menerima array a dan panjang array length sebagai parameter, mencetak semua elemen array ke layar dengan menggunakan for loop.
+
 Fungsi main:
-Mendeklarasikan array a dengan 6 elemen bertipe char.
-Mencetak urutan karakter sebelum dan setelah dilakukan sorting.
-Memanggil fungsi insertion_sort untuk mengurutkan array.
-Memanggil fungsi print_array untuk mencetak array sebelum dan setelah diurutkan secara descending.
-Ketika program dijalankan, outputnya akan menunjukkan array a sebelum dan setelah diurutkan dengan algoritma Insertion Sort secara descending. Algoritma ini efektif untuk dataset yang kecil dan hampir terurut, dengan kompleksitas waktu rata-rata dan terburuk O(n^2).
+Mendeklarasikan array a dengan 6 elemen bertipe char, mencetak urutan karakter sebelum dan setelah dilakukan sorting, memanggil fungsi insertion_sort untuk mengurutkan array, memanggil fungsi print_array untuk mencetak array sebelum dan setelah diurutkan secara descending.
+Saat program dijalankan, outputnya akan menunjukkan array a sebelum dan setelah diurutkan dengan algoritma Insertion Sort secara descending. 
 
 ## Unguided 
 
@@ -294,7 +280,7 @@ int main() {
 ![unguided1](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/ca859128-77b2-47bb-aadf-bac1e3fd026b)
 
 Kode di atas digunakan untuk mencetak 
-Program ini mendefinisikan fungsi selectionSort yang mengambil array arr dan ukuran array n sebagai parameter. Fungsi ini kemudian mengurutkan array menggunakan algoritma Selection Sort. Di dalam fungsi main, array ips didefinisikan dengan nilai-nilai yang diberikan, dan fungsi selectionSort dipanggil untuk mengurutkan nilai-nilai tersebut. Setelah itu, program mencetak nilai-nilai IPS yang telah terurut
+program fungsi selectionSort yang mengambil array arr dan ukuran array n sebagai parameter. Fungsi ini kemudian mengurutkan array menggunakan algoritma Selection Sort. Di dalam fungsi main, array ips didefinisikan dengan nilai-nilai yang diberikan, dan fungsi selectionSort dipanggil untuk mengurutkan nilai-nilai tersebut. Setelah itu, program mencetak nilai-nilai IPS yang telah terurut
 
 #### Full code Screenshot:
 ![fullcode1](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/a9878bb5-2d01-4aca-b72f-edf94a832837)
