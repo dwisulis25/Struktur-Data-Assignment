@@ -95,7 +95,7 @@ int main() {
 }
 ```
 Kode diatas mendeklarasikan array tiga dimensi dengan yang ukuran 2x3x3. Lalu kita diminta untuk memasukkan nilai untuk setiap koordinat (x, y, z) elemen array.Setelah semua nilai selesai dimasukkan, program akan  menampilkan nilai yang telah dimasukkan oleh pengguna dalam bentuj tabel. Dalam setiap elemen dipisahkan oleh spasi, dan setiap baris dan lapisan dipisahkan oleh baris kosong.
-Jadi, program di atas menampilkan nilai-nilai yang dimasukkan oleh pengguna dan dengan array tiga dimensi.
+Jadi, program di atas menampilkan nilai-nilai yang dimasukkan oleh pengguna dengan array tiga dimensi.
 
 
 ### 2. Program Mencari Nilai Maksimal pada Array
