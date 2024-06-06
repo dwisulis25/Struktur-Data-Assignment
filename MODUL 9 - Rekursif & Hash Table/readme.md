@@ -282,4 +282,5 @@ Kode di atas digunakan untuk
 Kesimpulan 
 
 ## Referensi
-[1] 
+[1] Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts,
+problems, Interview Questions. CareerMonk Publications
