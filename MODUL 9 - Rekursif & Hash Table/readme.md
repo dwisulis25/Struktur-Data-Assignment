@@ -277,7 +277,7 @@ Kode di atas digunakan untuk menghitung nilai faktorial dari inputan bilangan po
 #### Full code Screenshot:
 
 
-### 2. Buatlah sebuah program Rekursif Tidak Langsung (Indirect Recursion) dari eoal no 1 diatas!
+### 2. Buatlah sebuah program Rekursif Tidak Langsung (Indirect Recursion) dari soal no 1 diatas!
 
 ```C++
 #include <iostream>
@@ -327,7 +327,8 @@ int hitungFaktorial(int n) {
 ```
 #### Output:
 
-Kode di atas digunakan untuk 
+Kode di atas digunakan untuk menghitung nilai faktorial dari bilangan bulat positif.
+Dengan menggunakan dia fungsi yang memanggil satu sama lain.
 
 #### Full code Screenshot:
 
@@ -338,10 +339,107 @@ Implementasikan hash table untuk menyimpan data mahasiswa. Setiap mahasiswa memi
 - Implementasikan fungsi untuk menambahkan data baru, menghapus data, mencari data berdasarkan NIM, dan mencari data berdasarkan rentang nilai (80 – 90)
 
 ```C++
-------------isi-------------
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+
+// Struktur data untuk menyimpan informasi mahasiswa
+struct Mahasiswa {
+    string nim;
+    double nilai;
+};
+
+// Tabel hash untuk menyimpan data mahasiswa
+unordered_map<string, Mahasiswa> dataMahasiswa;
+
+// Fungsi untuk menambahkan data mahasiswa
+void tambahData() {
+    Mahasiswa mhs;
+    cout << "Masukkan NIM: ";
+    cin >> mhs.nim;
+    cout << "Masukkan nilai: ";
+    cin >> mhs.nilai;
+
+    // Simpan data ke tabel hash
+    dataMahasiswa[mhs.nim] = mhs;
+    cout << "Data mahasiswa berhasil ditambahkan." << endl;
+}
+
+// Fungsi untuk menghapus data mahasiswa berdasarkan NIM
+void hapusData() {
+    string nim;
+    cout << "Masukkan NIM mahasiswa yang ingin dihapus: ";
+    cin >> nim;
+
+    // Hapus data dari tabel hash
+    if (dataMahasiswa.erase(nim)) {
+        cout << "Data mahasiswa dengan NIM " << nim << " berhasil dihapus." << endl;
+    } else {
+        cout << "Data mahasiswa dengan NIM " << nim << " tidak ditemukan." << endl;
+    }
+}
+
+// Fungsi untuk mencari data mahasiswa berdasarkan NIM
+void cariDataNIM() {
+    string nim;
+    cout << "Masukkan NIM mahasiswa yang ingin dicari: ";
+    cin >> nim;
+
+    // Cari data di tabel hash
+    if (dataMahasiswa.find(nim) != dataMahasiswa.end()) {
+        cout << "Data mahasiswa dengan NIM " << nim << ":" << endl;
+        cout << "Nilai: " << dataMahasiswa[nim].nilai << endl;
+    } else {
+        cout << "Data mahasiswa dengan NIM " << nim << " tidak ditemukan." << endl;
+    }
+}
+
+// Fungsi untuk mencari data mahasiswa berdasarkan rentang nilai (80–90)
+void cariDataNilai() {
+    cout << "Data mahasiswa dengan nilai antara 80 hingga 90:" << endl;
+    for (const auto& entry : dataMahasiswa) {
+        if (entry.second.nilai >= 80 && entry.second.nilai <= 90) {
+            cout << "NIM: " << entry.first << ", Nilai: " << entry.second.nilai << endl;
+        }
+    }
+}
+
+int main() {
+    int pilihan;
+    do {
+        cout << "\nMenu:\n1. Tambah Data\n2. Hapus Data\n3. Cari Data berdasarkan NIM\n4. Cari Data berdasarkan Nilai\n0. Keluar\n";
+        cout << "Pilih menu: ";
+        cin >> pilihan;
+
+        switch (pilihan) {
+            case 1:
+                tambahData();
+                break;
+            case 2:
+                hapusData();
+                break;
+            case 3:
+                cariDataNIM();
+                break;
+            case 4:
+                cariDataNilai();
+                break;
+            case 0:
+                cout << "Terima kasih!" << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid. Silakan pilih lagi." << endl;
+        }
+    } while (pilihan != 0);
+
+    return 0;
+}
+
 ```
+
 #### Output:
-Kode di atas digunakan untuk 
+Program diatas memilimi beberapa fungsi salah satunya gungsi Utama (main):
+merupakan program utama memiliki menu pilihan yang memungkinkan pengguna untuk menambah, menghapus, atau mencari data mahasiswa. Selain itu apabila ingin memilih menu hingga memilih keluar (pilihan 0).
 
 #### Full code Screenshot:
 
