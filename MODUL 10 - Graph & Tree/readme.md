@@ -207,6 +207,20 @@ Fungsi tambahSimpul() memungkinkan pengguna menambah simpul ke pohon, Membaca Po
 Fungsi bacaPohon() membaca pohon dan menampilkan data simpul, setiap baris menampilkan simpul-simpul pada level yang sama.
 
 ### Output
+Silakan masukkan data: A
+Masukkan data kiri: B
+Masukkan data kanan: C
+Masukkan data kiri: D
+Masukkan data kanan: E
+Masukkan data kiri: 0
+Masukkan data kanan: F
+Masukkan data kiri: 0
+Masukkan data kanan: 0
+
+A
+B C
+D E F
+
 
 
 ## Unguided 
@@ -214,11 +228,89 @@ Fungsi bacaPohon() membaca pohon dan menampilkan data simpul, setiap baris menam
 ### 1. Buatlah program graph dengan menggunakan inputan user untuk menghitung jarak dari sebuah kota ke kota lainnya.
 
 ```C++
-----------isi-----------
+#include <iostream>
+#include <vector>
+#include <map>
+#include <limits>
+
+using namespace std;
+
+const int INF = numeric_limits<int>::max();
+
+// Representasi graf menggunakan adjacency list
+typedef map<string, map<string, int>> Graph;
+
+// Fungsi untuk menghitung jarak terpendek dengan algoritma Dijkstra
+void dijkstra(const Graph& graph, const string& start) {
+    map<string, int> distances;
+    map<string, string> previous;
+    vector<string> unvisited;
+
+    for (const auto& pair : graph) {
+        distances[pair.first] = INF;
+        unvisited.push_back(pair.first);
+    }
+
+    distances[start] = 0;
+
+    while (!unvisited.empty()) {
+        string current;
+        int min_distance = INF;
+
+        for (const string& city : unvisited) {
+            if (distances[city] < min_distance) {
+                min_distance = distances[city];
+                current = city;
+            }
+        }
+
+        unvisited.erase(remove(unvisited.begin(), unvisited.end(), current), unvisited.end());
+
+        for (const auto& neighbor : graph.at(current)) {
+            int distance = distances[current] + neighbor.second;
+            if (distance < distances[neighbor.first]) {
+                distances[neighbor.first] = distance;
+                previous[neighbor.first] = current;
+            }
+        }
+    }
+
+    cout << "Jarak terpendek dari " << start << " ke kota lain:" << endl;
+    for (const auto& pair : distances) {
+        cout << pair.first << ": " << pair.second << endl;
+    }
+}
+
+int main() {
+    Graph graph;
+    int num_edges;
+
+    cout << "Masukkan jumlah kota: ";
+    cin >> num_edges;
+
+    cout << "Masukkan data bobot antar kota:" << endl;
+    for (int i = 0; i < num_edges; ++i) {
+        string city1, city2;
+        int weight;
+        cin >> city1 >> city2 >> weight;
+        graph[city1][city2] = weight;
+        graph[city2][city1] = weight;
+    }
+
+    string start_city;
+    cout << "Masukkan kota awal: ";
+    cin >> start_city;
+
+    dijkstra(graph, start_city);
+
+    return 0;
+}
+
 ```
 #### Output:
 
-Kode di atas digunakan 
+Kode di atas adalah implementasi dari graf digunakan untuk menghitung jarak terpendek antara kota-kota dalam graf. Pertama program dimulai dengan fungsi inisialisasi() yang mengatur root (akar pohon) menjadi NULL, dilanjutkan dengan membuat Fungsi simpulBaru(char dataMasukkan) digunakan untuk membuat simpul baru dengan data yang dimasukkan dan memiliki tiga bagian: kanan, data, dan kiri. Lalu membentuk akar dengan menggunakan Fungsi simpulAkar() memeriksa apakah root sudah ada,
+Menambah Simpul: Fungsi tambahSimpul() tujuannya untjk memungkinkan pengguna menambah simpul ke pohon.Pengguna diminta memasukkan data kiri dan kanan untuk setiap simpul. Apabila terdapat data ‘0' artinya simpul tidak memiliki anak di arah tertentu.Terakhir membaca pohon dengan menggunakan fungsi bacaPohon() membaca pohon dan menampilkan data simpul .
 
 
 #### Full code Screenshot:
