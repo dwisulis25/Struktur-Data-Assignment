@@ -277,10 +277,53 @@ Kode di atas digunakan untuk menghitung nilai faktorial dari inputan bilangan po
 #### Full code Screenshot:
 
 
-### 2. Buatlah sebuah program Rekursif Langsung (Direct Recursion) yang menghitung nilai faktorial dari sebuah inputan bilangan bulat positif!
+### 2. Buatlah sebuah program Rekursif Tidak Langsung (Indirect Recursion) dari eoal no 1 diatas!
 
 ```C++
----------isi---------------
+#include <iostream>
+using namespace std;
+
+// Deklarasi fungsi rekursif
+int hitungFaktorial(int n);
+
+// Fungsi rekursif pertama
+int fungsiA(int n) {
+    if (n == 0) {
+        return 1;
+    }
+    return n * fungsiB(n - 1);
+}
+
+// Fungsi rekursif kedua
+int fungsiB(int n) {
+    if (n == 0) {
+        return 1;
+    }
+    return n * fungsiA(n - 1);
+}
+
+int main() {
+    int angka;
+    cout << "Masukkan bilangan bulat positif: ";
+    cin >> angka;
+
+    if (angka >= 0) {
+        cout << "Faktorial dari " << angka << " adalah: " << hitungFaktorial(angka) << endl;
+    } else {
+        cout << "Masukkan bilangan bulat positif!" << endl;
+    }
+
+    return 0;
+}
+
+// Implementasi fungsi rekursif untuk menghitung faktorial
+int hitungFaktorial(int n) {
+    if (n == 0) {
+        return 1;
+    }
+    return n * hitungFaktorial(n - 1);
+}
+
 ```
 #### Output:
 
