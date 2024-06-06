@@ -126,7 +126,10 @@ int main() {
          return 0;
 }
 ```
-Kode di atas adalah 
+Kode di atas adalah implementasi dari rekursi tidak langsung. Di dalamnya terdapat 
+fungsi functionA(int n): yang gunanya untuk menerima parameter n. Apabila n lebih besar dari 0, fungsi mencetak nilai n dan memanggil fungsi functionB(n - 1). Fungsi ini merupakan  contoh rekursi tidak langsung karena fungsi functionA memanggil fungsi functionB. Fungsi functionB(int n): merupakam fungsi yang menerima parameter n.
+Apabila n lebih besar dari 0, fungsi mencetak nilai n dan memanggil fungsi functionA(n / 2). Fungsi ini juga merupakan contoh rekursi tidak langsung karena fungsi functionB memanggil fungsi functionA.
+Fungsi main(): fungsi utama yang memanggil functionA(num) dengan input 5.
 
 ### 3. Guided 3
 
