@@ -280,7 +280,7 @@ Kode di atas digunakan untuk
 
 ## Kesimpulan
 Rekursif merupakan salah satu proses pengulangan fungsi atau prosedur yang memanggil dirinya sendiri. Dimana terdapat 2 jenis rekursi yaitu rekursi langsung dan tidak langsung. Sedangkan Fungsi hash adalah fungsi untuk membuat pemetaan antara kunci dan nilai, hal ini dilakukan melalui penggunaan rumus matematika yang dikenal sebagai fungsi hash. Operasi hash antaranya:  
-Insertion, Deletion, Searching, Update, dan Traversal. 
+Insertion, Deletion, Searching, Update, dan Traversal. Rekursi digunakan untuk mengatasi masalah yang dapat dipecahkan dengan pendekatan berulang. Sedangkan Hash Table digunakan untuk mengelola data dengan efisien berdasarkan kunci
 
 ## Referensi
 [1] Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts,
