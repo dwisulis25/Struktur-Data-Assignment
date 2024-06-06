@@ -196,7 +196,15 @@ int main() {
 }
 ```
 
-Kode di atas merupakan implementasi dari
+Kode di atas merupakan implementasi dari pohon biner. Yang pertama ada definisi Struktur Data Pohon dengan simpul yang memiliki tiga bagian: kanan, data, dan kiri.
+Setiap simpul memiliki dua anak (simpul kiri dan simpul kanan), selanjutnya terdapat
+Fungsi inisialisasi(): digunakan untuk menginisialisasi pohon dengan mengatur root (akar) menjadi NULL,Fungsi simpulBaru(char dataMasukkan): Untuk membuat simpul baru dengan data yang dimasukkan, Fungsi simpulAkar(): Untuk membentuk akar pohon jika belum ada dan pengguna diminta memasukkan data untuk akar, Fungsi tambahSimpul(): Untuk menambah simpul ke pohon.Data ‘0’ menandakan simpul tidak memiliki anak di arah tertentu,Fungsi bacaPohon(): Untuk membaca pohon dan menampilkan data simpul secara hierarkis.
+Setiap baris menampilkan simpul-simpul pada level yang sama, Fungsi main(): Gunanya untuk memanggil fungsi-fungsi tadi untuk membentuk dan membaca pohon.
+
+Dilanjutkan dengan Inisialisasi Pohon: Dimulai dengan fungsi inisialisasi() yang mengatur root (akar pohon) menjadi NULL, lalu membuat Simpul Baru:
+Fungsi simpulBaru(char dataMasukkan) digunakan untuk membuat simpul baru dengan data yang dimasukkan, lalu membentuk Akar Pohon: Fungsi simpulAkar() memeriksa apakah root sudah ada. Jika belum, pengguna diminta memasukkan data untuk akar, Menambah Simpul:
+Fungsi tambahSimpul() memungkinkan pengguna menambah simpul ke pohon, Membaca Pohon:
+Fungsi bacaPohon() membaca pohon dan menampilkan data simpul, setiap baris menampilkan simpul-simpul pada level yang sama.
 
 ### Output
 
