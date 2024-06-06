@@ -244,11 +244,35 @@ Fungsi main(): fungsi utama yang menguji fungsionalitas tabel hash.
 ### 1. Buatlah sebuah program Rekursif Langsung (Direct Recursion) yang menghitung nilai faktorial dari sebuah inputan bilangan bulat positif!
 
 ```C++
---------isi------------
+#include <iostream>
+using namespace std;
+
+int hitungFaktorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    } else {
+        return n * hitungFaktorial(n - 1);
+    }
+}
+
+int main() {
+    int angka;
+    cout << "Masukkan bilangan bulat positif: ";
+    cin >> angka;
+
+    if (angka >= 0) {
+        cout << "Faktorial dari " << angka << " adalah: " << hitungFaktorial(angka) << endl;
+    } else {
+        cout << "Masukkan bilangan bulat positif!" << endl;
+    }
+
+    return 0;
+}
+
 ```
 #### Output:
 
-Kode di atas digunakan untuk 
+Kode di atas digunakan untuk menghitung nilai faktorial dari inputan bilangan positif yang menggunakan program rekursif langsung dimana fungsi hitungFaktorial(int n) digunakan untuk menghitung faktorial dari bilangan n. Apabika n adalah 0 atau 1, fungsi mengembalikan nilai 1. Dan apabila n lebih besar dari 1, fungsi memanggil dirinya sendiri dengan argumen n - 1.
 
 #### Full code Screenshot:
 
