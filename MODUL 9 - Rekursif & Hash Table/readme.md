@@ -228,7 +228,16 @@ int main() {
     return 0;
 }
 ```
-Kode di atas digunakan 
+Kode diatas merupakan implementasi tabel hash (hash map). Pada program diatas
+Kelas HashNode: digunakan merepresentasikan simpul dalam tabel hash yang dimana pada setiap simpul memiliki atribut name (nama) dan phone_number (nomor telepon).
+Kelas HashMap: fungsinya mengelola tabel hash dengan menggunakan vektor sebagai wadah untuk menyimpan simpul-simpul.
+Fungsi hashFunc gunanya untuk menghitung nilai hash berdasarkan nama.
+Fungsi insert memasukkan simpul baru ke tabel hash.
+Fungsi remove menghapus simpul berdasarkan nama.
+Fungsi searchByName mencari nomor telepon berdasarkan nama. Contohnya Mistah, Pastah
+Fungsi print menampilkan seluruh tabel hash.
+Fungsi main(): fungsi utama yang menguji fungsionalitas tabel hash.
+
 
 ## Unguided 
 
