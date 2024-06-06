@@ -66,6 +66,17 @@ int main() {
         return 0;
 }
 ```
+Program tersebut adalah graf matriks ketetanggan yang digunakan untuk merepresentasikan hubungan antara beberapa kota di Jawa Barat dan Jawa Tengah.
+Pada program ini fungsi Simpul (Vertices): digunakan untuk mereprentasikan kota-kota dalam array simpul. Lalu fungsi busur (Edges): digunakan untuk menyatakan hubungan antara kota-kota yang direpresentasikan dalam matriks busur. Nilai 0 menunjukkan bahwa tidak ada hubungan langsung antara dua kota tertentu. Output dari program ini akan menampilkan informasi tentang hubungan antara kota-kota berdasarkan matriks ketetanggaan. 
+
+### Output
+Ciamis:  -> Bandung(7) -> Bekasi(8)
+Bandung:  -> Bekasi(5) -> Cianjur(9) -> Purwokerto(15)
+Bekasi:  -> Bandung(5) -> Cianjur(9) -> Tasikmalaya(5)
+Tasikmalaya:  -> Cianjur(2) -> Purwokerto(4) -> Yogyakarta(8)
+Cianjur:  -> Ciamis(3) -> Tasikmalaya(1)
+Purwokerto:  -> Bekasi(7) -> Yogyakarta(9) -> Cianjur(4)
+Yogyakarta:  -> Bekasi(7) -> Purwokerto(9)
 
 ### 2. Program Tree
 
@@ -184,6 +195,10 @@ int main() {
         return 0;
 }
 ```
+
+Kode di atas merupakan implementasi dari
+
+### Output
 
 
 ## Unguided 
