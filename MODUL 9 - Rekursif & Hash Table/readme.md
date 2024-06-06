@@ -95,7 +95,7 @@ int main() {
     return 0;
 }
 ```
-Kode di atas merupakan 
+Kode di atas merupakan contoh program yang menggunakan rekursi untuk melakukan hitung mundur berdasarkan angka yang diinputkan. Diawali dengan fungsi countdown(int n): untuk menerima parameter n atau angka yang akan dihitung mundur. Apabila n sama dengan 0, fungsi berhenti (base case) dan apabila n bukan 0, fungsi mencetak nilai n, kemudian memanggil dirinya sendiri dengan argumen n - 1. Dilanjutkan fungsi main(): atau fubgsj utama yang memanggil countdown(5) dengan input 5.
 
 ### 2. Guided 2
 
