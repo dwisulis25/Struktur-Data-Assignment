@@ -446,4 +446,4 @@ Jadi dari pembelajaran graf dan tree dapat disimpulkan bahwa graf atau graph ada
 [1] Karumanchi, N. (2011). Data Structures and Algorithms Made Easy: 700 Data Structure
 and Algorithmic Puzzles. CreateSpace.
 
-[2] 
+[2] Arzinal, D., & Liem, I. (2010). IMPLEMENTASI STRUKTUR POHON SEBAGAI KOMPONEN DI BERBAGAI PLATFORM. Seminar Nasional Aplikasi Teknologi Informasi 2010 (SNATI 2010).
