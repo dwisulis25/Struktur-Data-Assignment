@@ -312,7 +312,14 @@ Program mencetak berapa kali angka 4 muncul dalam array data..
 ![fullcode3](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/65552230-7534-4088-bd57-9c081d1ff100)
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Pencarian (Searching) yaitu proses menemukan suatu nilai tertentu
+pada kumpulan data. Hasil pencarian adalah salah satu dari tiga keadaan
+ini: data ditemukan, data ditemukan lebih dari satu, atau data tidak
+ditemukan. Searching juga dapat dianggap sebagai proses pencarian suatu
+data di dalam sebuah array dengan cara mengecek satu persatu pada
+setiap index baris atau setiap index kolomnya dengan menggunakan teknik
+perulangan untuk melakukan pencarian data. Terdapat 2 metode pada
+algoritma Searching.
 
 ## Referensi
 [1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
