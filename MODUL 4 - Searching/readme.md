@@ -64,8 +64,7 @@ int main(){
 
 }
 ```
-Kode di atas digunakan untuk 
-Kode yang Anda berikan adalah program C++ yang melakukan pencarian sederhana, dikenal sebagai Sequential Search atau Linear Search, untuk menemukan suatu nilai dalam array. Berikut adalah interpretasi dari kode tersebut:
+Kode di atas adalah program yang melakukan pencarian sederhana, dikenal sebagai Sequential Search atau Linear Search, untuk menemukan suatu nilai dalam array. Berikut adalah interpretasi dari kode tersebut:
 
 Program mendeklarasikan sebuah array data dengan 10 elemen integer.
 Nilai yang dicari, disimpan dalam variabel cari, adalah 10.
@@ -146,8 +145,7 @@ int main() {
     return 0;
 }
 ```
-Kode di atas digunakan untuk 
-Program C++ yang Anda berikan adalah contoh implementasi dari algoritma Selection Sort untuk mengurutkan array dan Binary Search untuk mencari elemen dalam array yang sudah diurutkan. Berikut adalah interpretasi dari kode tersebut:
+Kode di atas adalah contoh implementasi dari algoritma Selection Sort untuk mengurutkan array dan Binary Search untuk mencari elemen dalam array yang sudah diurutkan. Berikut adalah interpretasi dari kode tersebut:
 
 Deklarasi Array dan Variabel:
 bil_data adalah array yang berisi 7 bilangan integer.
@@ -227,7 +225,7 @@ int main() {
 #### Output:
 ![unguided1](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/b39e3846-13bf-4ed4-b273-a0c9cffc18f8)
 
-Kode di atas digunakan untuk
+
 Program di atas akan meminta pengguna untuk memasukkan sebuah kalimat dan huruf yang ingin dicari. Kemudian, program akan mengurutkan kalimat tersebut dan melakukan pencarian dengan Binary Search. Jika huruf ditemukan, program akan memberitahu pengguna bahwa huruf tersebut ditemukan; jika tidak, program akan memberitahu bahwa huruf tersebut tidak ditemukan.
 
 Perlu diingat bahwa Binary Search efektif untuk pencarian dalam kumpulan data yang besar dan terurut, tetapi mungkin tidak efisien untuk kalimat pendek atau untuk kasus di mana urutan huruf dalam kalimat penting. Untuk kasus seperti itu, pencarian linear mungkin lebih sesuai.
@@ -265,7 +263,7 @@ int main() {
 #### Output:
 ![unguided2](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/940c3f09-525c-4bcc-abc8-da962581709d)
 
-Kode di atas digunakan untuk 
+
 Program ini akan meminta pengguna untuk memasukkan sebuah kalimat. Kemudian, program akan mengiterasi setiap karakter dalam kalimat tersebut, memeriksa apakah karakter tersebut adalah huruf vokal (a, e, i, o, u) dengan membandingkannya dalam bentuk huruf kecil (lowercase), dan menghitung jumlah total huruf vokal yang ditemukan. Hasilnya akan ditampilkan ke pengguna..
 
 #### Full code Screenshot:
@@ -298,8 +296,8 @@ int main() {
 #### Output:
 ![unguided3](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/805677f1-7435-41b3-bebe-e6bd49f72bb9)
 
-Kode di atas digunakan untuk 
-Kode yang Anda berikan adalah program C++ yang menghitung berapa kali angka 4 muncul dalam array data. Mari kita interpretasikan kode tersebut:
+
+Kode diatas adalah program C++ yang menghitung berapa kali angka 4 muncul dalam array data. Mari kita interpretasikan kode tersebut:
 
 Inisialisasi Array dan Variabel:
 Array data berisi elemen-elemen: 9, 4, 1, 4, 7, 10, 5, 4, 12, dan 4.
