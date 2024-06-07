@@ -331,7 +331,7 @@ Dalam contoh di atas, buku adalah array yang terdiri dari lima elemen struct Buk
 ![fullcode2](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/45df1ae5-3d46-4d71-bd6b-788e3c491b6b)
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Merupakan tipe data bentukan yang terdiri dari beberapa tipe data standar maupun tipe data bentukan lainnya yang telah didefinisikan sebelumnya. Sebagaimana telah disinggung sebelumnya, keyword yang digunakan untuk membuat/mendeklarasikan sebuah struktur yakni struct.
 
 ## Referensi
 Sjukani, Moh. 2007. Struktur Data (Algoritma & Struktur Data 2) dengan C, C++. Jakarta : Penerbit Mitra Wacana Media.
