@@ -316,6 +316,7 @@ int main() {
 Kode di atas adalah implementasi dari priority queue yang menggunakan heap yang dumodifikasi yang mana heap dikonstruksi secara manual berdasarkan user. H diubah menjadi std::vector<int> untuk memungkinkan penambahan elemen secara dinamis. Fungsi main yang memungkinkan pengguna untuk memilih operasi yang ingin dilakukan pada heap, seperti memasukkan elemen, mengambil elemen dengan prioritas tertinggi, mengubah prioritas elemen, menghapus elemen, dan mencetak heap. 
 
 #### Full code Screenshot:
+![image](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/c98d1b97-1e74-4367-9121-bb894844ec39)
 
 ## Kesimpulan
 Priority queue adalah struktur data yang efisien untuk mengelola kumpulan elemen dengan prioritas yang berbeda-beda. Dengan menggunakan heap, baik itu max-heap atau min-heap, priority queue dapat melakukan operasi penambahan dan penghapusan elemen dengan waktu yang sangat cepat, yaitu O(log N), dan memungkinkan akses ke elemen dengan prioritas tertinggi atau terendah dalam waktu konstan O(1).
