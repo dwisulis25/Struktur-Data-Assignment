@@ -284,46 +284,30 @@ Kode di atas digunakan untuk menghitung nilai faktorial dari inputan bilangan po
 #include <iostream>
 using namespace std;
 
-// Deklarasi fungsi rekursif
-int hitungFaktorial(int n);
-
-// Fungsi rekursif pertama
-int fungsiA(int n) {
-    if (n == 0) {
-        return 1;
+// Fungsi rekursif untuk menghitung faktorial
+int factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1; // Basis rekursif: faktorial dari 0 dan 1 adalah 1
+    } else {
+        return n * factorial(n - 1); // Langkah rekursif: n! = n * (n-1)!
     }
-    return n * fungsiB(n - 1);
-}
-
-// Fungsi rekursif kedua
-int fungsiB(int n) {
-    if (n == 0) {
-        return 1;
-    }
-    return n * fungsiA(n - 1);
 }
 
 int main() {
-    int angka;
+    int n;
     cout << "Masukkan bilangan bulat positif: ";
-    cin >> angka;
+    cin >> n;
 
-    if (angka >= 0) {
-        cout << "Faktorial dari " << angka << " adalah: " << hitungFaktorial(angka) << endl;
+    if (n < 0) {
+        cout << "Input tidak valid. Masukkan bilangan bulat positif." << endl;
     } else {
-        cout << "Masukkan bilangan bulat positif!" << endl;
+        int hasil = factorial(n);
+        cout << "Faktorial dari " << n << " adalah " << hasil << endl;
     }
 
     return 0;
 }
 
-// Implementasi fungsi rekursif untuk menghitung faktorial
-int hitungFaktorial(int n) {
-    if (n == 0) {
-        return 1;
-    }
-    return n * hitungFaktorial(n - 1);
-}
 
 ```
 #### Output:
@@ -332,6 +316,7 @@ Kode di atas digunakan untuk menghitung nilai faktorial dari bilangan bulat posi
 Dengan menggunakan dia fungsi yang memanggil satu sama lain.
 
 #### Full code Screenshot:
+![image](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/afc32c7e-6fda-44e8-a6e6-ef1609d14696)
 
 ### 3. Nomor 3
 Implementasikan hash table untuk menyimpan data mahasiswa. Setiap mahasiswa memiliki NIM dan nilai. Implementasikan fungsi untuk menambahkan data baru, menghapus data, mencari data berdasarkan NIM, dan mencari data berdasarkan nilai. Dengan ketentuan :
@@ -341,108 +326,143 @@ Implementasikan hash table untuk menyimpan data mahasiswa. Setiap mahasiswa memi
 
 ```C++
 #include <iostream>
-#include <unordered_map>
+#include <vector>
 using namespace std;
 
-// Struktur data untuk menyimpan informasi mahasiswa
+// Struktur data untuk mahasiswa
 struct Mahasiswa {
-    string nim;
-    double nilai;
+    int nim;
+    int nilai;
 };
 
-// Tabel hash untuk menyimpan data mahasiswa
-unordered_map<string, Mahasiswa> dataMahasiswa;
+// Ukuran tabel hash
+const int tableSize = 10;
 
-// Fungsi untuk menambahkan data mahasiswa
-void tambahData() {
-    Mahasiswa mhs;
-    cout << "Masukkan NIM: ";
-    cin >> mhs.nim;
-    cout << "Masukkan nilai: ";
-    cin >> mhs.nilai;
+// Kelas untuk tabel hash
+class HashTable {
+private:
+    vector<vector<Mahasiswa>> table;
 
-    // Simpan data ke tabel hash
-    dataMahasiswa[mhs.nim] = mhs;
-    cout << "Data mahasiswa berhasil ditambahkan." << endl;
-}
-
-// Fungsi untuk menghapus data mahasiswa berdasarkan NIM
-void hapusData() {
-    string nim;
-    cout << "Masukkan NIM mahasiswa yang ingin dihapus: ";
-    cin >> nim;
-
-    // Hapus data dari tabel hash
-    if (dataMahasiswa.erase(nim)) {
-        cout << "Data mahasiswa dengan NIM " << nim << " berhasil dihapus." << endl;
-    } else {
-        cout << "Data mahasiswa dengan NIM " << nim << " tidak ditemukan." << endl;
+    // Fungsi hash sederhana
+    int hashFunction(int nim) {
+        return nim % tableSize;
     }
-}
 
-// Fungsi untuk mencari data mahasiswa berdasarkan NIM
-void cariDataNIM() {
-    string nim;
-    cout << "Masukkan NIM mahasiswa yang ingin dicari: ";
-    cin >> nim;
-
-    // Cari data di tabel hash
-    if (dataMahasiswa.find(nim) != dataMahasiswa.end()) {
-        cout << "Data mahasiswa dengan NIM " << nim << ":" << endl;
-        cout << "Nilai: " << dataMahasiswa[nim].nilai << endl;
-    } else {
-        cout << "Data mahasiswa dengan NIM " << nim << " tidak ditemukan." << endl;
+public:
+    // Konstruktor
+    HashTable() {
+        table.resize(tableSize);
     }
-}
 
-// Fungsi untuk mencari data mahasiswa berdasarkan rentang nilai (80–90)
-void cariDataNilai() {
-    cout << "Data mahasiswa dengan nilai antara 80 hingga 90:" << endl;
-    for (const auto& entry : dataMahasiswa) {
-        if (entry.second.nilai >= 80 && entry.second.nilai <= 90) {
-            cout << "NIM: " << entry.first << ", Nilai: " << entry.second.nilai << endl;
+    // Fungsi untuk menambahkan data baru
+    void tambahData(int nim, int nilai) {
+        int index = hashFunction(nim);
+        Mahasiswa mahasiswa = {nim, nilai};
+        table[index].push_back(mahasiswa);
+    }
+
+    // Fungsi untuk menghapus data berdasarkan NIM
+    void hapusData(int nim) {
+        int index = hashFunction(nim);
+        for (int i = 0; i < table[index].size(); ++i) {
+            if (table[index][i].nim == nim) {
+                table[index].erase(table[index].begin() + i);
+                cout << "Data dengan NIM " << nim << " berhasil dihapus." << endl;
+                return;
+            }
+        }
+        cout << "Data dengan NIM " << nim << " tidak ditemukan." << endl;
+    }
+
+    // Fungsi untuk mencari data berdasarkan NIM
+    void cariNIM(int nim) {
+        int index = hashFunction(nim);
+        for (Mahasiswa mhs : table[index]) {
+            if (mhs.nim == nim) {
+                cout << "Data ditemukan: NIM = " << mhs.nim << ", Nilai = " << mhs.nilai << endl;
+                return;
+            }
+        }
+        cout << "Data dengan NIM " << nim << " tidak ditemukan." << endl;
+    }
+
+    // Fungsi untuk mencari data berdasarkan rentang nilai
+    void cariRentangNilai(int minNilai, int maxNilai) {
+        cout << "Data mahasiswa dengan nilai antara " << minNilai << " dan " << maxNilai << ":" << endl;
+        for (vector<Mahasiswa> bucket : table) {
+            for (Mahasiswa mhs : bucket) {
+                if (mhs.nilai >= minNilai && mhs.nilai <= maxNilai) {
+                    cout << "NIM = " << mhs.nim << ", Nilai = " << mhs.nilai << endl;
+                }
+            }
         }
     }
-}
+};
 
 int main() {
-    int pilihan;
-    do {
-        cout << "\nMenu:\n1. Tambah Data\n2. Hapus Data\n3. Cari Data berdasarkan NIM\n4. Cari Data berdasarkan Nilai\n0. Keluar\n";
-        cout << "Pilih menu: ";
-        cin >> pilihan;
+    HashTable hashTable;
 
-        switch (pilihan) {
-            case 1:
-                tambahData();
+    int choice;
+    do {
+        cout << "\nMenu:\n";
+        cout << "1. Tambah Data\n";
+        cout << "2. Hapus Data\n";
+        cout << "3. Cari Data berdasarkan NIM\n";
+        cout << "4. Cari Data berdasarkan Rentang Nilai\n";
+        cout << "5. Keluar\n";
+        cout << "Pilih tindakan: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1: {
+                int nim, nilai;
+                cout << "Masukkan NIM: ";
+                cin >> nim;
+                cout << "Masukkan nilai: ";
+                cin >> nilai;
+                hashTable.tambahData(nim, nilai);
                 break;
-            case 2:
-                hapusData();
+            }
+            case 2: {
+                int nim;
+                cout << "Masukkan NIM data yang akan dihapus: ";
+                cin >> nim;
+                hashTable.hapusData(nim);
                 break;
-            case 3:
-                cariDataNIM();
+            }
+            case 3: {
+                int nim;
+                cout << "Masukkan NIM data yang akan dicari: ";
+                cin >> nim;
+                hashTable.cariNIM(nim);
                 break;
-            case 4:
-                cariDataNilai();
+            }
+            case 4: {
+                int minNilai, maxNilai;
+                cout << "Masukkan rentang nilai (min max): ";
+                cin >> minNilai >> maxNilai;
+                hashTable.cariRentangNilai(minNilai, maxNilai);
                 break;
-            case 0:
-                cout << "Terima kasih!" << endl;
+            }
+            case 5:
+                cout << "Terima kasih telah menggunakan program!" << endl;
                 break;
             default:
-                cout << "Pilihan tidak valid. Silakan pilih lagi." << endl;
+                cout << "Pilihan tidak valid. Silakan coba lagi." << endl;
         }
-    } while (pilihan != 0);
+    } while (choice != 5);
 
     return 0;
 }
 
 ```
 
-#### Output:
+
 Program diatas memilimi beberapa fungsi salah satunya gungsi Utama (main):
 merupakan program utama memiliki menu pilihan yang memungkinkan pengguna untuk menambah, menghapus, atau mencari data mahasiswa. Selain itu apabila ingin memilih menu hingga memilih keluar (pilihan 0).
 
 #### Full code Screenshot:
+![image](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/381ca33f-a71f-4200-bcae-4f7d8c0e0817)
 
 ## Kesimpulan
 Rekursif merupakan salah satu proses pengulangan fungsi atau prosedur yang memanggil dirinya sendiri. Dimana terdapat 2 jenis rekursi yaitu rekursi langsung dan tidak langsung. Sedangkan Fungsi hash adalah fungsi untuk membuat pemetaan antara kunci dan nilai, hal ini dilakukan melalui penggunaan rumus matematika yang dikenal sebagai fungsi hash. Operasi hash antaranya:  
