@@ -315,6 +315,7 @@ Menambah Simpul: Fungsi tambahSimpul() tujuannya untjk memungkinkan pengguna men
 
 #### Full code Screenshot:
 
+![image](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/28f137bf-10d6-451b-9c24-24844a432507)
 
 ### 2. Modifikasi guided tree diatas dengan program menu menggunakan input data tree dari user dan tampilkan pada pre-order, inorder, dan post order!
 
