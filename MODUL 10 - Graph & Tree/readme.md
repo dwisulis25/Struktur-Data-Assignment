@@ -433,10 +433,9 @@ int main() {
         return 0;
 }
 ```
-#### Output:
-
 
 #### Full code Screenshot:
+![image](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/2c292d25-875a-4a8b-88da-58fe08d8dded)
 
 
 ## Kesimpulan
