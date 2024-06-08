@@ -178,8 +178,6 @@ Digunakan untuk menerima array a dan panjang array length sebagai parameter.
 Fungsi main:
 Untuk mendeklarasikan array a dengan 6 elemen bertipe double, mencetak urutan bilangan sebelum dan setelah dilakukan sorting,memanggil fungsi bubble_sort untuk mengurutkan array, memanggil fungsi print_array untuk mencetak array sebelum dan setelah diurutkan. Saat program dijalankan, output akan menunjukkan array a sebelum dan setelah diurutkan dengan algoritma Bubble Sort. 
 
-## Output
-## Screenshoot
 
 ### 2. Mengurutkan karakter secara descending (dari terbesar hingga terkecil) menggunakan Algoritma Insertion Sort
 
