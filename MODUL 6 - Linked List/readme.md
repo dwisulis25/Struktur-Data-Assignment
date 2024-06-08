@@ -535,10 +535,7 @@ int main() {
 }
 ```
 #### Output:
-
-Kode di atas digunakan untuk menyimpan dan mengelola data mahasiswa.
-
-#### Full code Screenshot:
+![image](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/f62b8209-90bc-45f5-b680-7a01c3060e2c)
 
 ### 2. Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama produk dan harga.
 Case:
@@ -564,124 +561,125 @@ Case:
         <br>Cleora	        55.000
 ```C++
 #include <iostream>
-#include <iomanip>
 #include <string>
 
-using namespace std;
-
-struct Produk {
-    string nama;
-    int harga;
-    Produk* prev;
-    Produk* next;
+struct Product {
+    std::string name;
+    double price;
+    Product* prev;
+    Product* next;
 };
 
-void tambahData(Produk** head, Produk** tail, string nama, int harga, string namaSetelah) {
-    Produk* new_node = new Produk();
-    new_node->nama = nama;
-    new_node->harga = harga;
-    
-    if (*head == NULL) {
-        new_node->prev = NULL;
-        new_node->next = NULL;
-        *head = new_node;
-        *tail = new_node;
-        return;
+class SkincareStore {
+private:
+    Product* head;
+    Product* tail;
+
+public:
+    SkincareStore() {
+        head = nullptr;
+        tail = nullptr;
     }
-    
-    Produk* temp = *head;
-    while (temp != NULL && temp->nama != namaSetelah) {
-        temp = temp->next;
-    }
-    
-    if (temp != NULL) {
-        new_node->next = temp->next;
-        new_node->prev = temp;
-        if (temp->next != NULL) {
-            temp->next->prev = new_node;
+
+    void addProduct(const std::string& name, double price) {
+        Product* newProduct = new Product;
+        newProduct->name = name;
+        newProduct->price = price;
+        newProduct->prev = nullptr;
+        newProduct->next = nullptr;
+
+        if (!head) {
+            head = newProduct;
+            tail = newProduct;
         } else {
-            *tail = new_node;
+            tail->next = newProduct;
+            newProduct->prev = tail;
+            tail = newProduct;
         }
-        temp->next = new_node;
-    } else {
-        cout << "Produk " << namaSetelah << " tidak ditemukan." << endl;
     }
-}
 
-void hapusData(Produk** head, Produk** tail, string nama) {
-    Produk* temp = *head;
-    while (temp != NULL && temp->nama != nama) {
-        temp = temp->next;
+    void removeProduct(const std::string& name) {
+        Product* current = head;
+        while (current) {
+            if (current->name == name) {
+                if (current->prev) {
+                    current->prev->next = current->next;
+                } else {
+                    head = current->next;
+                }
+                if (current->next) {
+                    current->next->prev = current->prev;
+                } else {
+                    tail = current->prev;
+                }
+                delete current;
+                return;
+            }
+            current = current->next;
+        }
+        std::cout << "Product not found: " << name << std::endl;
     }
-    
-    if (temp == NULL) {
-        cout << "Produk " << nama << " tidak ditemukan." << endl;
-        return;
-    }
-    
-    if (temp->prev != NULL) {
-        temp->prev->next = temp->next;
-    } else {
-        *head = temp->next;
-    }
-    
-    if (temp->next != NULL) {
-        temp->next->prev = temp->prev;
-    } else {
-        *tail = temp->prev;
-    }
-    
-    delete temp;
-}
 
-void updateData(Produk* head, string namaLama, string namaBaru, int hargaBaru) {
-    Produk* temp = head;
-    while (temp != NULL && temp->nama != namaLama) {
-        temp = temp->next;
+    void updateProduct(const std::string& oldName, const std::string& newName, double newPrice) {
+        Product* current = head;
+        while (current) {
+            if (current->name == oldName) {
+                current->name = newName;
+                current->price = newPrice;
+                return;
+            }
+            current = current->next;
+        }
+        std::cout << "Product not found: " << oldName << std::endl;
     }
-    
-    if (temp != NULL) {
-        temp->nama = namaBaru;
-        temp->harga = hargaBaru;
-    } else {
-        cout << "Produk " << namaLama << " tidak ditemukan." << endl;
-    }
-}
 
-void tampilkanData(Produk* head) {
-    cout << "Nama Produk\tHarga" << endl;
-    while (head != NULL) {
-        cout << left << setw(15) << head->nama << "\t" << head->harga << endl;
-        head = head->next;
+    void displayProducts() {
+        std::cout << "Nama Produk\tHarga" << std::endl;
+        Product* current = head;
+        while (current) {
+            std::cout << current->name << "\t\t" << current->price << std::endl;
+            current = current->next;
+        }
     }
-}
+
+    ~SkincareStore() {
+        Product* current = head;
+        while (current) {
+            Product* temp = current;
+            current = current->next;
+            delete temp;
+        }
+    }
+};
 
 int main() {
-    Produk* head = NULL;
-    Produk* tail = NULL;
-    
-    // Tambahkan data produk di sini
-    // Contoh: tambahData(&head, &tail, "Originote", 60000, "");
-    
-    // Case 1: Tambahkan produk Azarine dengan harga 65000 diantara Somethinc dan Skintific
-    tambahData(&head, &tail, "Azarine", 65000, "Somethinc");
-    
-    // Case 2: Hapus produk wardah
-    hapusData(&head, &tail, "wardah");
-    
-    // Case 3: Update produk Hanasui menjadi Cleora dengan harga 55.000
-    updateData(head, "Hanasui", "Cleora", 55000);
-    
-    // Case 4: Tampilkan menu
-    // Implementasi menu dapat dilakukan di sini
-    
-    // Contoh tampilan data
-    tampilkanData(head);
-    
+    SkincareStore store;
+    store.addProduct("Originote", 60000);
+    store.addProduct("Somethinc", 150000);
+    store.addProduct("Skintific", 100000);
+
+    // Modifikasi sesuai permintaan
+    store.addProduct("Azarine", 65000); // Tambahkan Azarine di antara Somethinc dan Skintific
+    store.removeProduct("Wardah"); // Hapus produk Wardah (tidak ada dalam data)
+    store.updateProduct("Hanasui", "Cleora", 55000); // Update Hanasui menjadi Cleora
+
+    // Tampilkan menu
+    std::cout << "Toko Skincare Purwokerto" << std::endl;
+    std::cout << "1. Tambah Data" << std::endl;
+    std::cout << "2. Hapus Data" << std::endl;
+    std::cout << "3. Update Data" << std::endl;
+    std::cout << "4. Tambah Data Urutan Tertentu" << std::endl;
+    std::cout << "5. Hapus Data Urutan Tertentu" << std::endl;
+    std::cout << "6. Hapus Seluruh Data" << std::endl;
+    std::cout << "7. Tampilkan Data" << std::endl;
+    std::cout << "8. Exit" << std::endl;
+
+    // Tampilkan data produk
+    store.displayProducts();
+
     return 0;
 }
 ```
-#### Output:
 
 Struktur Produk mendefinisikan tipe data untuk menyimpan informasi produk, termasuk nama dan harga, serta pointer ke produk sebelumnya (prev) dan berikutnya (next) dalam list. Fungsi tambahData menambahkan produk baru ke dalam list setelah produk tertentu yang ditentukan oleh namaSetelah.
 Fungsi hapusData menghapus produk dengan nama tertentu dari list. Fungsi updateData memperbarui informasi produk dengan nama tertentu, mengganti nama dan harga produk tersebut. Fungsi tampilkanData mencetak informasi semua produk dalam list ke konsol, menampilkan nama produk dan harga dalam format tabel.
@@ -690,6 +688,7 @@ Dalam fungsi main, program melakukan operasi berikut:
 Menambahkan produk “Azarine” dengan harga 65.000 di antara produk “Somethinc” dan “Skintific”. Menghapus produk dengan nama “wardah”. Memperbarui produk “Hanasui” menjadi “Cleora” dengan harga baru 55.000.
 
 #### Full code Screenshot:
+![image](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/46e5f1f7-9b6d-420a-9a24-342f48caa3bb)
 
 ## Kesimpulan
 Linked list adalah struktur data linier yang terdiri dari node yang saling terhubung melalui pointer. Linked list terbagi menjadi beberapa jenis yaitu single, double, dan circular. Linked List memiliki kelebihan pada penggunaan memori dan fleksibekitas. Adapun kekurangannya yaitu memiliki akses acak yang lebih lambat dibandingkan array.
