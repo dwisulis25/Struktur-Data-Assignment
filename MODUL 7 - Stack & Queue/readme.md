@@ -149,8 +149,6 @@ int main() {
     return 0;
 }
 ```
-Kode di atas merupakan kode dengan struktur data stack menggunakan array. Output dari kode diatas akan mencetak daftar buku dalam stack, status stack, dan perubahan yang terjadi setelah operasi tertentu dilakukan.
-
 
 
 ### 2. Guided 2
@@ -247,7 +245,6 @@ int main() {
     return 0;
 }
 ```
-Kode di atas merupakan kode sistem antrian yang di dalamnya terdapat operasi dasar seperti enqueue untuk menambahkan data ke antrian, dequeue untuk menghapus data dari antrian, isFull dan isEmpty untuk memeriksa kondisi antrian, dan fungsi untuk melihat isi antrian dan menghitung jumlah elemen di dalamnya. Juga fungsi main untuk melakukan beberapa operasi antrian.
 
 ## Unguided 
 
@@ -258,46 +255,58 @@ Kode di atas merupakan kode sistem antrian yang di dalamnya terdapat operasi das
 #include <iostream>
 #include <stack>
 #include <string>
-#include <algorithm>
+#include <cctype>
+using namespace std;
 
-bool isPalindrome(const std::string &sentence) {
-    std::stack<char> stack;
-    std::string cleaned;
-
-    // Hapus semua karakter non-alfabet dan konversi ke huruf kecil
-    for (char ch : sentence) {
-        if (isalpha(ch)) {
-            cleaned.push_back(tolower(ch));
+// Fungsi untuk menghapus karakter non-alfabet dari kalimat
+string removeNonAlphabet(string str) {
+    string result = "";
+    for (char c : str) {
+        if (isalpha(c)) {
+            result += tolower(c); // Ubah huruf menjadi lowercase
         }
     }
+    return result;
+}
 
-    // Masukkan setengah pertama kalimat ke dalam stack
-    for (size_t i = 0; i < cleaned.length() / 2; i++) {
-        stack.push(cleaned[i]);
+// Fungsi untuk menentukan apakah sebuah kalimat adalah palindrom atau tidak
+bool isPalindrome(string str) {
+    stack<char> s;
+    int len = str.length();
+
+    // Masukkan setengah karakter pertama ke dalam stack
+    for (int i = 0; i < len / 2; ++i) {
+        s.push(str[i]);
     }
 
-    // Jika panjang kalimat ganjil, lewati karakter tengah
-    size_t start = cleaned.length() / 2 + cleaned.length() % 2;
+    // Lewati setengah karakter pertama (jika jumlah karakter ganjil)
+    int i = (len % 2 == 0) ? len / 2 : len / 2 + 1;
 
-    // Bandingkan setengah kedua kalimat dengan isi stack
-    for (size_t i = start; i < cleaned.length(); i++) {
-        if (stack.top() != cleaned[i]) {
-            return false;
+    // Bandingkan karakter di stack dengan karakter di setengah bagian kedua kalimat
+    while (i < len) {
+        if (s.top() != str[i]) {
+            return false; // Jika tidak cocok, bukan palindrom
         }
-        stack.pop();
+        s.pop();
+        ++i;
     }
-    return true;
+
+    return true; // Jika semua karakter cocok, palindrom
 }
 
 int main() {
-    std::string sentence;
-    std::cout << "Masukkan kalimat: ";
-    std::getline(std::cin, sentence);
+    string kalimat;
+    cout << "Masukkan kalimat: ";
+    getline(cin, kalimat);
 
-    if (isPalindrome(sentence)) {
-        std::cout << "Kalimat tersebut adalah palindrom.\n";
+    // Hapus karakter non-alfabet dan ubah huruf menjadi lowercase
+    string kalimatTanpaNonAlfabet = removeNonAlphabet(kalimat);
+
+    // Tentukan apakah kalimat tersebut palindrom atau tidak
+    if (isPalindrome(kalimatTanpaNonAlfabet)) {
+        cout << "Kalimat tersebut adalah palindrom." << endl;
     } else {
-        std::cout << "Kalimat tersebut bukan palindrom.\n";
+        cout << "Kalimat tersebut bukan palindrom." << endl;
     }
 
     return 0;
@@ -309,6 +318,7 @@ int main() {
 Kode di atas digunakan untuk mengecek suatu kalimat apakah suatu kalimat polindrom atau bukan. Pertama program akan menghapus karakter yang bukan huruf dan mengubah semua huruf menjadi huruf kecil, disini program menggunakan stack dengan prinsip LIFO. Selanjutnya program akan mengabaikan huruf ditengah apabila terdapat karakter ganjil. Selanjutnya program akan membandingkan apakah kalimat sama atau tidak. Apabila cocok maka kalimat tersebut adalah polindrom.
 
 #### Full code Screenshot:
+![image](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/cfab7628-fb39-4221-bd07-af5f483ab6b1)
 
 
 ### 2. Ubah guided queue diatas agar menjadi program inputan user dan program menu
@@ -414,11 +424,11 @@ int main() {
 }
 
 ```
-#### Output:
 
 Kode di atas merupakan program inputan teller yang dimodifikasi menjadi program inputan user dan menu. Kode tersebut dimodifikasi dengan menambahkan menu untuk memungkinkan pengguna agar dapat menambahkan antrian (enqueueAntrian),mengeluarkan antrian (dequeueAntrian), melihat isi antrian (viewQueue), mengosongkan antrian (clearQueue). Sehingga program akan terus menampilkan menu sampai pengguna memilih untuk keluar.
 #### Full code Screenshot:
 
+![image](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/53496ac2-27de-4727-9c05-0a3bc61d1a35)
 
 ## Kesimpulan
 Jadi stack adalah struktur data sederhana yang digunakan untuk menyimpan data (mirip
