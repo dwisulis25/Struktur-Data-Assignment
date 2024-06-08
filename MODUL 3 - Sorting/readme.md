@@ -380,8 +380,12 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 
 #### Full code Screenshot:
 v![image](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/6505965b-876a-4dee-aa7b-5132695fb38d)
+
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Algoritma sorting adalah algoritma untuk meletakkan kumpulan elemen data ke dalam urutan tertentu, berdasarkan satu atau beberapa kunci ke dalam tiap-tiap elemen. Betdasarkan uritanya algoritma sorting dibagi menjadi dua jenis:
+
+a. Ascending: Pengurutan berdasarkan dari kecil ke besar. Contohnya: a, b, c, d, e.
+b. Descending : Pengurutan berdasarkan dari besar ke kecil. Contohnya : e, d, c, b, a.
 
 ## Referensi
 [1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
