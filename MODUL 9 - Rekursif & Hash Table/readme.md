@@ -275,6 +275,7 @@ int main() {
 Kode di atas digunakan untuk menghitung nilai faktorial dari inputan bilangan positif yang menggunakan program rekursif langsung dimana fungsi hitungFaktorial(int n) digunakan untuk menghitung faktorial dari bilangan n. Apabika n adalah 0 atau 1, fungsi mengembalikan nilai 1. Dan apabila n lebih besar dari 1, fungsi memanggil dirinya sendiri dengan argumen n - 1.
 
 #### Full code Screenshot:
+![image](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/e173572d-1a4c-4c60-874a-bbbe264f5314)
 
 
 ### 2. Buatlah sebuah program Rekursif Tidak Langsung (Indirect Recursion) dari soal no 1 diatas!
