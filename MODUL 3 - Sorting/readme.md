@@ -374,13 +374,12 @@ int main() {
 
 ```
 #### Output:
-
+![image](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/81231534-d951-487c-a4a8-281cbb19de0f)
 
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan 
 
 #### Full code Screenshot:
-
-
+v![image](https://github.com/dwisulis25/Struktur-Data-Assignment/assets/162300904/6505965b-876a-4dee-aa7b-5132695fb38d)
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
 
