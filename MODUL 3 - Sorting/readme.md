@@ -339,17 +339,44 @@ Setelah pengurutan selesai, program mencetak nama-nama warga yang telah terurut.
 
 ```C++
 #include <iostream>
-using namespace std;
+#include <vector>
+#include <algorithm>
 
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    int n;
+    std::cout << "Masukkan jumlah karakter: ";
+    std::cin >> n;
+
+    std::vector<char> karakter(n);
+    std::cout << "Masukkan " << n << " karakter:\n";
+    for (int i = 0; i < n; ++i) {
+        std::cin >> karakter[i];
+    }
+
+    // Sorting ascending
+    std::sort(karakter.begin(), karakter.end());
+    std::cout << "Karakter setelah diurutkan secara menaik (ascending):\n";
+    for (char c : karakter) {
+        std::cout << c << ' ';
+    }
+    std::cout << '\n';
+
+    // Sorting descending
+    std::sort(karakter.begin(), karakter.end(), std::greater<char>());
+    std::cout << "Karakter setelah diurutkan secara menurun (descending):\n";
+    for (char c : karakter) {
+        std::cout << c << ' ';
+    }
+    std::cout << '\n';
+
     return 0;
 }
+
 ```
 #### Output:
 
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan 
 
 #### Full code Screenshot:
 
